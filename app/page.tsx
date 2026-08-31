@@ -18,11 +18,6 @@ import Image from "next/image";
 const APP_STORE_URL =
   "https://apps.apple.com/au/app/acts-auctioneer-training/id6802531027";
 const SUPPORT_URL = "https://nickmac1830-web.github.io/acts-support/";
-const PRIVACY_URL =
-  "https://nickmac1830-web.github.io/acts-support/privacy.html";
-const TERMS_URL = "https://nickmac1830-web.github.io/acts-support/terms.html";
-const BILLING_URL =
-  "https://nickmac1830-web.github.io/acts-support/billing.html";
 
 const features = [
   {
@@ -274,10 +269,10 @@ export default function Home() {
         </div>
         <div className="footer-links">
           <a href={SUPPORT_URL} target="_blank" rel="noreferrer">Support</a>
-          <a href={PRIVACY_URL} target="_blank" rel="noreferrer">Privacy</a>
-          <a href={TERMS_URL} target="_blank" rel="noreferrer">Terms</a>
-          <a href={BILLING_URL} target="_blank" rel="noreferrer">Billing</a>
-          <a href="mailto:support@actsauctioneer.com">Contact</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/billing">Billing</a>
+          <a href="mailto:actsauctioneertraining@gmail.com">Contact</a>
         </div>
         <p>© 2026 Nicholas McIntyre. ACTS: Auctioneer Training.</p>
       </footer>
