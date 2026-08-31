@@ -333,9 +333,44 @@ video:focus-visible {
 .video-shell > p span { animation: pulse 1.7s infinite; background: #4ade80; border-radius: 50%; height: 7px; width: 7px; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(74,222,128,0); } 0%,100% { box-shadow: 0 0 0 0 rgba(74,222,128,.3); } }
 
-.walkthrough-section { max-width: 1440px; overflow: hidden; }
-.screenshot-rail { display: grid; gap: 32px; grid-template-columns: repeat(4, minmax(230px, 1fr)); }
-.screenshot-rail figure { margin: 0; position: relative; }
+.walkthrough-section { max-width: 1440px; overflow: visible; }
+.screenshot-carousel { width: calc(100vw - max(30px, calc((100vw - 1380px) / 2))); }
+.carousel-toolbar { align-items: center; display: flex; justify-content: space-between; margin: -10px 0 22px; padding-right: max(30px, calc((100vw - 1380px) / 2)); }
+.carousel-toolbar > p { align-items: center; color: var(--muted); display: flex; font-size: 12px; gap: 8px; margin: 0; }
+.carousel-toolbar > p span { color: #a77404; font-size: 18px; }
+.carousel-controls { display: flex; gap: 10px; }
+.carousel-controls button {
+  align-items: center;
+  background: var(--navy-900);
+  border: 1px solid var(--navy-900);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  width: 44px;
+}
+.carousel-controls button:hover { background: #a77404; border-color: #a77404; transform: translateY(-1px); }
+.carousel-controls button:focus-visible { outline: 3px solid var(--gold-400); outline-offset: 3px; }
+.screenshot-rail {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 30px max(10vw, 150px) 24px 0;
+  scroll-behavior: smooth;
+  scroll-padding-left: 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--gold-500) #ded9ce;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.screenshot-rail::-webkit-scrollbar { height: 8px; }
+.screenshot-rail::-webkit-scrollbar-track { background: #ded9ce; border-radius: 999px; }
+.screenshot-rail::-webkit-scrollbar-thumb { background: var(--gold-500); border-radius: 999px; }
+.screenshot-rail figure { flex: 0 0 clamp(238px, 21vw, 300px); margin: 0; position: relative; scroll-snap-align: start; }
 .screenshot-rail figure > span { color: #9b730c; font-family: Georgia, serif; font-size: 12px; left: 4px; position: absolute; top: -28px; }
 .screenshot-rail .phone { border-radius: 30px; height: auto; margin-bottom: 20px; width: 100%; }
 .screenshot-rail figcaption { font-family: Georgia, serif; font-size: 18px; text-align: center; }
@@ -511,8 +546,7 @@ footer > p { color: #6f788b; font-size: 10px; grid-column: 1 / -1; margin: 12px 
   .demo-copy .kicker, .download-link { justify-content: center; }
   .demo-copy > p:not(.kicker) { margin-left: auto; margin-right: auto; }
   .video-shell { margin-top: 20px; }
-  .screenshot-rail { display: flex; overflow-x: auto; padding: 28px 5vw 20px; scroll-snap-type: x mandatory; }
-  .screenshot-rail figure { flex: 0 0 260px; scroll-snap-align: center; }
+  .screenshot-rail figure { flex-basis: 260px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .price-card.featured { transform: none; }
   .privacy-callout { grid-template-columns: auto 1fr; }
@@ -554,6 +588,11 @@ footer > p { color: #6f788b; font-size: 10px; grid-column: 1 / -1; margin: 12px 
   .video-shell { max-width: 300px; }
   .walkthrough-section { padding-left: 0; padding-right: 0; }
   .walkthrough-section .section-heading { padding-left: 20px; padding-right: 20px; }
+  .screenshot-carousel { width: 100vw; }
+  .carousel-toolbar { padding-left: 20px; padding-right: 20px; }
+  .carousel-toolbar > p { max-width: 210px; }
+  .screenshot-rail { padding-left: 20px; padding-right: 22vw; scroll-padding-left: 20px; }
+  .screenshot-rail figure { flex-basis: min(74vw, 270px); scroll-snap-align: start; }
   .pro-section { padding: 85px 20px; }
   .price-card { min-height: auto; }
   .privacy-callout { gap: 18px; grid-template-columns: 1fr; }

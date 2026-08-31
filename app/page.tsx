@@ -23,6 +23,7 @@ import {
   Video,
 } from "lucide-react";
 import Image from "next/image";
+import { ScreenshotCarousel } from "./components/screenshot-carousel";
 
 const APP_STORE_URL =
   "https://apps.apple.com/au/app/acts-auctioneer-training/id6802531027";
@@ -68,9 +69,13 @@ const plans = [
 
 const screenshots = [
   { src: "/media/hub.webp", alt: "ACTS hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
+  { src: "/media/training.webp", alt: "ACTS memory training session with a live auctioneer prompt", label: "Build memory under pressure" },
   { src: "/media/live-auction.webp", alt: "ACTS live auction number entry and voice controls", label: "Respond in real time" },
+  { src: "/media/script-viewer.webp", alt: "ACTS generated auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
+  { src: "/media/saved-scripts.webp", alt: "ACTS saved auction scripts ready to visualise or run", label: "Save and repeat key scenarios" },
   { src: "/media/summary.webp", alt: "ACTS auction performance summary", label: "See the full result" },
   { src: "/media/analytics.webp", alt: "ACTS advanced performance analytics", label: "Find your next improvement" },
+  { src: "/media/progress.webp", alt: "ACTS progress summary showing score, runtime and improvement over saved runs", label: "Track improvement over time" },
 ];
 
 export default function Home() {
@@ -192,19 +197,9 @@ export default function Home() {
             <p className="kicker">Inside ACTS</p>
             <h2>From first bid to focused feedback.</h2>
           </div>
-          <p>Swipe through the actual app experience.</p>
+          <p>Drag, swipe or use the arrows to explore the actual app experience.</p>
         </div>
-        <div className="screenshot-rail">
-          {screenshots.map((shot, index) => (
-            <figure key={shot.src}>
-              <span>0{index + 1}</span>
-              <div className="phone">
-                <Image src={shot.src} alt={shot.alt} width={942} height={2046} loading="lazy" unoptimized />
-              </div>
-              <figcaption>{shot.label}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <ScreenshotCarousel screenshots={screenshots} />
       </section>
 
       <section className="pro-section" id="pro">
