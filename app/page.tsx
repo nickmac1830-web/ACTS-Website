@@ -4,20 +4,28 @@ import {
   ArrowRight,
   BarChart3,
   Brain,
+  Camera,
   Check,
+  CircleHelp,
+  CreditCard,
   Download,
   FileText,
   Gauge,
+  LockKeyhole,
+  Mail,
   Mic2,
+  Play,
+  Scale,
   ShieldCheck,
   Sparkles,
   Target,
+  Users,
+  Video,
 } from "lucide-react";
 import Image from "next/image";
 
 const APP_STORE_URL =
   "https://apps.apple.com/au/app/acts-auctioneer-training/id6802531027";
-const SUPPORT_URL = "https://nickmac1830-web.github.io/acts-support/";
 
 const features = [
   {
@@ -70,7 +78,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="ACTS Auctioneer Training home">
-          <span className="brand-mark">A</span>
+          <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} priority unoptimized />
           <span>
             <strong>ACTS</strong>
             <small>Auctioneer Training</small>
@@ -100,6 +108,10 @@ export default function Home() {
               <Apple size={30} fill="currentColor" aria-hidden="true" />
               <span><small>Download on the</small><strong>App Store</strong></span>
             </a>
+            <div className="play-store-soon" aria-label="Google Play coming soon">
+              <Play size={23} fill="currentColor" aria-hidden="true" />
+              <span><small>Coming soon to</small><strong>Google Play</strong></span>
+            </div>
             <a className="text-button" href="#demo">Watch the app in action <ArrowDown size={17} /></a>
           </div>
           <ul className="hero-notes" aria-label="App highlights">
@@ -119,12 +131,6 @@ export default function Home() {
               priority
               unoptimized
             />
-          </div>
-          <div className="metric-card metric-top">
-            <span>Accuracy</span><strong>100%</strong>
-          </div>
-          <div className="metric-card metric-bottom">
-            <span>Total score</span><strong>81.6</strong><small>/ 95</small>
           </div>
         </div>
       </section>
@@ -251,6 +257,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section resource-section" id="support">
+        <div className="section-heading compact">
+          <div><p className="kicker">Here when you need it</p><h2>Support and important information.</h2></div>
+          <p>Everything you need is part of this website—clear, easy to find and kept in one place.</p>
+        </div>
+        <div className="resource-grid">
+          <a href="/support"><CircleHelp size={26} /><span><strong>App support</strong><small>Troubleshooting and subscriptions</small></span><ArrowRight size={18} /></a>
+          <a href="/contact"><Mail size={26} /><span><strong>Contact ACTS</strong><small>Questions, feedback and partnerships</small></span><ArrowRight size={18} /></a>
+          <a href="/privacy"><LockKeyhole size={26} /><span><strong>Privacy policy</strong><small>How ACTS handles your information</small></span><ArrowRight size={18} /></a>
+          <a href="/terms"><Scale size={26} /><span><strong>Terms of use</strong><small>The terms that apply when using ACTS</small></span><ArrowRight size={18} /></a>
+          <a href="/billing"><CreditCard size={26} /><span><strong>Billing information</strong><small>Plans, renewals and cancellations</small></span><ArrowRight size={18} /></a>
+        </div>
+      </section>
+
+      <section className="social-section" aria-labelledby="social-heading">
+        <div>
+          <p className="kicker">ACTS in the community</p>
+          <h2 id="social-heading">Training content is coming to your feed.</h2>
+          <p>Follow ACTS soon for auction drills, quick challenges, product demonstrations and weekend auction insights.</p>
+        </div>
+        <div className="social-grid" aria-label="Social media channels coming soon">
+          <div><Camera size={28} /><strong>Instagram</strong><span>Coming soon</span></div>
+          <div><Video size={28} /><strong>TikTok</strong><span>Coming soon</span></div>
+          <div><Users size={28} /><strong>Facebook</strong><span>Coming soon</span></div>
+        </div>
+      </section>
+
       <section className="final-cta">
         <div>
           <p className="kicker">Your next auction starts now</p>
@@ -260,19 +293,23 @@ export default function Home() {
           <Apple size={30} fill="currentColor" aria-hidden="true" />
           <span><small>Download on the</small><strong>App Store</strong></span>
         </a>
+        <div className="play-store-soon dark" aria-label="Google Play coming soon">
+          <Play size={23} fill="currentColor" aria-hidden="true" />
+          <span><small>Coming soon to</small><strong>Google Play</strong></span>
+        </div>
       </section>
 
       <footer>
         <div className="footer-brand">
-          <span className="brand-mark">A</span>
+          <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} unoptimized />
           <div><strong>ACTS</strong><small>Auctioneer Training</small></div>
         </div>
         <div className="footer-links">
-          <a href={SUPPORT_URL} target="_blank" rel="noreferrer">Support</a>
+          <a href="/support">Support</a>
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
           <a href="/billing">Billing</a>
-          <a href="mailto:actsauctioneertraining@gmail.com">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
         <p>© 2026 Nicholas McIntyre. ACTS: Auctioneer Training.</p>
       </footer>

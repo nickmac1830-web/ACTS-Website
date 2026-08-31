@@ -13,8 +13,9 @@ export const metadata: Metadata = {
     "auction mental maths",
   ],
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/media/acts-icon.png",
+    shortcut: "/media/acts-icon.png",
+    apple: "/media/acts-icon.png",
   },
 };
 
