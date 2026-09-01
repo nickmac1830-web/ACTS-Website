@@ -269,13 +269,19 @@ export default function Home() {
       <section className="social-section" aria-labelledby="social-heading">
         <div>
           <p className="kicker">ACTS in the community</p>
-          <h2 id="social-heading">Training content is coming to your feed.</h2>
-          <p>Follow ACTS soon for auction drills, quick challenges, product demonstrations and weekend auction insights.</p>
+          <h2 id="social-heading">Follow the training beyond the app.</h2>
+          <p>Follow ACTS for auction drills, quick challenges, product demonstrations and weekend auction insights.</p>
         </div>
-        <div className="social-grid" aria-label="Social media channels coming soon">
-          <div><Camera size={28} /><strong>Instagram</strong><span>Coming soon</span></div>
-          <div><Video size={28} /><strong>TikTok</strong><span>Coming soon</span></div>
-          <div><Users size={28} /><strong>Facebook</strong><span>Coming soon</span></div>
+        <div className="social-grid" aria-label="ACTS social media profiles">
+          <a href="https://www.instagram.com/actsauctioneer" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on Instagram">
+            <Camera size={28} /><strong>Instagram</strong><span>@actsauctioneer</span>
+          </a>
+          <a href="https://www.tiktok.com/@actsauctioneer" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on TikTok">
+            <Video size={28} /><strong>TikTok</strong><span>@actsauctioneer</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61594208121787" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on Facebook">
+            <Users size={28} /><strong>Facebook</strong><span>Visit page</span>
+          </a>
         </div>
       </section>
 

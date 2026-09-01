@@ -453,16 +453,21 @@ video:focus-visible {
 .social-section h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(38px, 4vw, 56px); font-weight: 500; letter-spacing: -.035em; line-height: 1.04; margin: 0; max-width: 680px; }
 .social-section > div:first-child > p:last-child { color: #b9c0cf; font-size: 15px; line-height: 1.7; max-width: 650px; }
 .social-grid { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
-.social-grid > div {
+.social-grid > a {
   align-items: center;
   border: 1px solid rgba(240,200,77,.35);
+  color: inherit;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   min-height: 150px;
+  text-decoration: none;
   text-align: center;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
+.social-grid > a:hover { background: rgba(240,200,77,.07); border-color: var(--gold-400); transform: translateY(-2px); }
+.social-grid > a:focus-visible { outline: 2px solid var(--gold-400); outline-offset: 3px; }
 .social-grid svg { color: var(--gold-400); }
 .social-grid strong { font-size: 14px; }
 .social-grid span { color: #8f99ad; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
@@ -602,7 +607,7 @@ footer > p { color: #6f788b; font-size: 10px; grid-column: 1 / -1; margin: 12px 
   .resource-grid a { min-height: 102px; padding: 20px; }
   .social-section { gap: 42px; padding: 70px 20px; }
   .social-grid { grid-template-columns: 1fr; }
-  .social-grid > div { flex-direction: row; justify-content: flex-start; min-height: 82px; padding: 18px 22px; text-align: left; }
+  .social-grid > a { flex-direction: row; justify-content: flex-start; min-height: 82px; padding: 18px 22px; text-align: left; }
   .social-grid span { margin-left: auto; }
   .final-cta { padding: 62px 20px; }
   .final-cta h2 { font-size: 39px; }
