@@ -94,6 +94,7 @@ export default function Home() {
           <a href="#demo">Demo</a>
           <a href="#pro">ACTS Pro</a>
           <a href="#faq">FAQ</a>
+          <a href="/android-testing">Android Testing</a>
         </nav>
         <a className="nav-cta" href={APP_STORE_URL} target="_blank" rel="noreferrer">
           Get ACTS <ArrowRight size={16} aria-hidden="true" />
@@ -113,10 +114,10 @@ export default function Home() {
               <Apple size={30} fill="currentColor" aria-hidden="true" />
               <span><small>Download on the</small><strong>App Store</strong></span>
             </a>
-            <div className="play-store-soon" aria-label="Google Play coming soon">
+            <a className="play-store-soon play-store-link" href="/android-testing" aria-label="Join ACTS Android testing">
               <Play size={23} fill="currentColor" aria-hidden="true" />
-              <span><small>Coming soon to</small><strong>Google Play</strong></span>
-            </div>
+              <span><small>Join the</small><strong>Android Test</strong></span>
+            </a>
             <a className="text-button" href="#demo">Watch the app in action <ArrowDown size={17} /></a>
           </div>
           <ul className="hero-notes" aria-label="App highlights">
@@ -294,10 +295,10 @@ export default function Home() {
           <Apple size={30} fill="currentColor" aria-hidden="true" />
           <span><small>Download on the</small><strong>App Store</strong></span>
         </a>
-        <div className="play-store-soon dark" aria-label="Google Play coming soon">
+        <a className="play-store-soon play-store-link dark" href="/android-testing" aria-label="Join ACTS Android testing">
           <Play size={23} fill="currentColor" aria-hidden="true" />
-          <span><small>Coming soon to</small><strong>Google Play</strong></span>
-        </div>
+          <span><small>Join the</small><strong>Android Test</strong></span>
+        </a>
       </section>
 
       <footer>
@@ -311,6 +312,7 @@ export default function Home() {
           <a href="/terms">Terms</a>
           <a href="/billing">Billing</a>
           <a href="/contact">Contact</a>
+          <a href="/android-testing">Android Testing</a>
         </div>
         <p>© 2026 Nicholas McIntyre. ACTS: Auctioneer Training.</p>
       </footer>
