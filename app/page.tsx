@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { ScreenshotCarousel } from "./components/screenshot-carousel";
+import { SiteFooter } from "./components/site-footer";
+import { SiteHeader } from "./components/site-header";
 
 const APP_STORE_URL =
   "https://apps.apple.com/au/app/acts-auctioneer-training/id6802531027";
@@ -61,10 +63,43 @@ const features = [
   },
 ];
 
-const plans = [
-  { name: "Weekly", price: "$9", period: "/ week", note: "A flexible entry point" },
-  { name: "Monthly", price: "$32", period: "/ month", note: "Consistent training access", featured: true },
-  { name: "Annual", price: "$189", period: "/ year", note: "The strongest yearly value", best: true },
+const tiers = [
+  {
+    name: "ACTS Standard",
+    label: "Core training",
+    description: "A focused foundation for regular auction practice.",
+    prices: [
+      ["Weekly", "$3"],
+      ["Monthly", "$6"],
+      ["Annual", "$32"],
+    ],
+    features: [
+      "2 auction difficulty settings",
+      "3 focused training modules",
+      "Basic review and scoring",
+      "Visual practice mode",
+    ],
+  },
+  {
+    name: "ACTS Pro",
+    label: "Complete toolkit",
+    description: "Advanced control, deeper review and more ways to practise.",
+    featured: true,
+    prices: [
+      ["Weekly", "$9"],
+      ["Monthly", "$32"],
+      ["Annual", "$189"],
+    ],
+    features: [
+      "6 auction difficulty settings",
+      "5 focused training modules",
+      "Advanced analytical reports",
+      "Custom script generation",
+      "Save and reopen scripts",
+      "Visual and audio practice modes",
+      "Voice control on supported devices",
+    ],
+  },
 ];
 
 const screenshots = [
@@ -81,25 +116,7 @@ const screenshots = [
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="ACTS Auctioneer Training home">
-          <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} priority unoptimized />
-          <span>
-            <strong>ACTS</strong>
-            <small>Auctioneer Training</small>
-          </span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#features">Features</a>
-          <a href="#demo">Demo</a>
-          <a href="#pro">ACTS Pro</a>
-          <a href="#faq">FAQ</a>
-          <a href="/android-testing">Android Testing</a>
-        </nav>
-        <a className="nav-cta" href={APP_STORE_URL} target="_blank" rel="noreferrer">
-          Get ACTS <ArrowRight size={16} aria-hidden="true" />
-        </a>
-      </header>
+      <SiteHeader home />
 
       <section className="hero" id="top">
         <div className="hero-glow" aria-hidden="true" />
@@ -121,7 +138,7 @@ export default function Home() {
             <a className="text-button" href="#demo">Watch the app in action <ArrowDown size={17} /></a>
           </div>
           <ul className="hero-notes" aria-label="App highlights">
-            <li><Check size={15} /> Free to download</li>
+            <li><Check size={15} /> Free to download. Paid access required.</li>
             <li><Check size={15} /> No account required</li>
             <li><Check size={15} /> iPhone &amp; iPad</li>
           </ul>
@@ -203,32 +220,40 @@ export default function Home() {
         <ScreenshotCarousel screenshots={screenshots} />
       </section>
 
-      <section className="pro-section" id="pro">
-        <div className="pro-intro">
-          <div className="pro-badge"><span>ACTS</span> PRO</div>
-          <p className="kicker">Go further</p>
-          <h2>Unlock advanced training and analytical tools.</h2>
-          <p>Choose the access period that suits your training. Every plan unlocks the complete ACTS Pro experience.</p>
+      <section className="pricing-section" id="pricing">
+        <div className="pricing-intro">
+          <p className="kicker">Choose your training level</p>
+          <h2>Start focused. Go further when you are ready.</h2>
+          <p>Both memberships provide paid access to ACTS. Standard covers the core routine; Pro opens the complete training and review toolkit.</p>
         </div>
-        <div className="pricing-grid">
-          {plans.map((plan) => (
-            <article className={`price-card ${plan.featured ? "featured" : ""}`} key={plan.name}>
-              {plan.featured && <div className="popular">Most popular</div>}
-              {plan.best && <div className="best">Best value</div>}
-              <h3>{plan.name}</h3>
-              <p className="price"><strong>{plan.price}</strong><span>{plan.period}</span></p>
-              <p className="plan-note">{plan.note}</p>
+
+        <div className="tier-grid">
+          {tiers.map((tier) => (
+            <article className={`tier-card ${tier.featured ? "featured" : ""}`} key={tier.name}>
+              {tier.featured && <div className="popular">Complete toolkit</div>}
+              <p className="tier-label">{tier.label}</p>
+              <h3>{tier.name}</h3>
+              <p className="tier-description">{tier.description}</p>
+              <div className="billing-list" aria-label={`${tier.name} pricing in Australian dollars`}>
+                {tier.prices.map(([billing, price]) => (
+                  <div key={billing}>
+                    <span>{billing}</span>
+                    <strong>{price}</strong>
+                    <small>AUD</small>
+                  </div>
+                ))}
+              </div>
               <ul>
-                <li><Check size={17} /> Full access to ACTS Pro</li>
-                <li><Check size={17} /> All Pro training tools</li>
-                <li><Check size={17} /> Advanced performance insights</li>
-                <li><Check size={17} /> Cancel through your App Store account</li>
+                {tier.features.map((feature) => (
+                  <li key={feature}><Check size={17} aria-hidden="true" /> {feature}</li>
+                ))}
               </ul>
             </article>
           ))}
         </div>
-        <p className="pricing-note">Prices shown in AUD for the Australian App Store. Apple displays the applicable local price before purchase. Subscriptions auto-renew unless cancelled.</p>
-        <a className="gold-button" href={APP_STORE_URL} target="_blank" rel="noreferrer">Download ACTS free <ArrowRight size={18} /></a>
+
+        <p className="pricing-note">Prices shown in AUD for the Australian App Store. Apple confirms the final price before purchase. Subscriptions auto-renew unless cancelled. Voice control requires a supported device; manual controls remain available.</p>
+        <a className="gold-button" href={APP_STORE_URL} target="_blank" rel="noreferrer">View ACTS on the App Store <ArrowRight size={18} /></a>
       </section>
 
       <section className="section privacy-callout">
@@ -246,9 +271,11 @@ export default function Home() {
         </div>
         <div className="faq-list">
           <details><summary>Who is ACTS designed for?<span>+</span></summary><p>ACTS is designed for trainee, practising and competition auctioneers, as well as real-estate professionals building stronger auction numeracy and sequence confidence.</p></details>
-          <details><summary>Can I use ACTS without paying?<span>+</span></summary><p>Yes. ACTS is free to download and the standard experience can be used without an ACTS Pro subscription.</p></details>
+          <details><summary>Can I use ACTS without paying?<span>+</span></summary><p>ACTS is free to download, but a paid Standard or Pro subscription is required for access. The app shows the available plan and billing options before you purchase.</p></details>
           <details><summary>Does ACTS require an account?<span>+</span></summary><p>No. There is no ACTS sign-in or account creation process. Your training information is stored locally on your device.</p></details>
+          <details><summary>What is included in ACTS Standard?<span>+</span></summary><p>Standard includes two auction difficulty settings, three training modules, basic review and scoring, and visual practice mode.</p></details>
           <details><summary>What does ACTS Pro unlock?<span>+</span></summary><p>ACTS Pro unlocks advanced training configurations, analytical insights, pattern analysis, training recommendations and other premium tools shown inside the app.</p></details>
+          <details><summary>Will voice control work on every device?<span>+</span></summary><p>No. Voice control is a Pro feature on supported devices and depends on compatible speech-recognition services and hardware. Manual controls remain available.</p></details>
           <details><summary>Is ACTS available outside Australia?<span>+</span></summary><p>ACTS is available through supported App Store regions. Prices and availability are displayed by Apple for your account region.</p></details>
         </div>
       </section>
@@ -290,6 +317,7 @@ export default function Home() {
         <div>
           <p className="kicker">Your next auction starts now</p>
           <h2>Sharper numbers. Better decisions. More confidence under pressure.</h2>
+          <p className="final-cta-note">Free to download. A paid subscription is required for access.</p>
         </div>
         <a className="app-store-button light" href={APP_STORE_URL} target="_blank" rel="noreferrer">
           <Apple size={30} fill="currentColor" aria-hidden="true" />
@@ -301,21 +329,7 @@ export default function Home() {
         </a>
       </section>
 
-      <footer>
-        <div className="footer-brand">
-          <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} unoptimized />
-          <div><strong>ACTS</strong><small>Auctioneer Training</small></div>
-        </div>
-        <div className="footer-links">
-          <a href="/support">Support</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/billing">Billing</a>
-          <a href="/contact">Contact</a>
-          <a href="/android-testing">Android Testing</a>
-        </div>
-        <p>© 2026 Nicholas McIntyre. ACTS: Auctioneer Training.</p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

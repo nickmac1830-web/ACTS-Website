@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { ArrowLeft, Check, Mail, ShieldCheck, Smartphone, Users } from "lucide-react";
+import { Check, Mail, ShieldCheck, Smartphone, Users } from "lucide-react";
+import { SiteFooter } from "../components/site-footer";
+import { SiteHeader } from "../components/site-header";
 import { TestingSignupForm } from "./testing-signup-form";
 
 export const metadata: Metadata = {
@@ -11,19 +12,7 @@ export const metadata: Metadata = {
 export default function AndroidTestingPage() {
   return (
     <main className="testing-page">
-      <header className="site-header testing-header">
-        <a className="brand" href="/" aria-label="ACTS Auctioneer Training home">
-          <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} priority unoptimized />
-          <span><strong>ACTS</strong><small>Auctioneer Training</small></span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="/#features">Features</a>
-          <a href="/#demo">Demo</a>
-          <a href="/#pro">ACTS Pro</a>
-          <a href="/#faq">FAQ</a>
-        </nav>
-        <a className="nav-cta nav-cta-muted" href="/"><ArrowLeft size={16} /> Back to ACTS</a>
-      </header>
+      <SiteHeader backLabel="Back to ACTS" />
 
       <section className="testing-hero">
         <div>
@@ -69,6 +58,7 @@ export default function AndroidTestingPage() {
 
         <TestingSignupForm />
       </section>
+      <SiteFooter />
     </main>
   );
 }

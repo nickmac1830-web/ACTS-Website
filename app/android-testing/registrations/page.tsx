@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeToggle } from "../../components/theme-toggle";
 import { RegistrationsDashboard } from "./registrations-dashboard";
 
 export const metadata: Metadata = {
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function RegistrationsPage() {
-  return <main className="registrations-page"><RegistrationsDashboard /></main>;
+  return (
+    <main className="registrations-page">
+      <div className="admin-theme"><ThemeToggle /></div>
+      <RegistrationsDashboard />
+    </main>
+  );
 }
