@@ -388,6 +388,53 @@ video:focus-visible {
 .script-heading-actions { align-items: flex-start; display: flex; flex-direction: column; gap: 22px; }
 .script-heading-actions p { color: var(--muted); font-size: 16px; line-height: 1.75; margin: 0; }
 .script-download-all { min-width: 210px; }
+.script-showcase-layout { align-items: start; display: grid; gap: 42px; grid-template-columns: 292px minmax(0, 1fr); margin: 0 auto; max-width: 1240px; }
+.custom-auction-feature { align-items: center; display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.custom-auction-phone-wrap { display: flex; justify-content: center; width: 100%; }
+.custom-auction-phone {
+  background: #17191b;
+  border: 6px solid #252c31;
+  border-radius: 50px;
+  box-shadow: 0 24px 48px rgba(37, 44, 49, 0.2);
+  padding: 6px;
+  position: relative;
+  width: min(100%, 286px);
+}
+:root[data-theme="dark"] .custom-auction-phone { background: #f6f3ed; border-color: #f6f3ed; box-shadow: 0 24px 52px rgba(0, 0, 0, 0.34); }
+.custom-auction-screen { aspect-ratio: 942 / 2046; background: var(--background); border-radius: 40px; overflow: hidden; position: relative; }
+.custom-auction-phone .theme-screen-light { display: block; }
+.custom-auction-phone .theme-screen-dark { display: none; }
+:root[data-theme="dark"] .custom-auction-phone .theme-screen-light { display: none; }
+:root[data-theme="dark"] .custom-auction-phone .theme-screen-dark { display: block; }
+.custom-auction-fixed { left: 0; overflow: hidden; pointer-events: none; position: absolute; right: 0; z-index: 3; }
+.custom-auction-fixed img { height: auto; left: 0; position: absolute; width: 100%; }
+.custom-auction-header { height: 12.25%; top: 0; }
+.custom-auction-header img { top: 0; }
+.custom-auction-footer { bottom: 0; height: 12.2%; }
+.custom-auction-footer img { bottom: 0; }
+.custom-auction-scroll {
+  bottom: 12.15%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: absolute;
+  right: 0;
+  scrollbar-width: none;
+  top: 12.2%;
+  z-index: 1;
+}
+.custom-auction-scroll::-webkit-scrollbar { display: none; height: 0; width: 0; }
+.custom-auction-scroll:focus-visible { box-shadow: inset 0 0 0 2px var(--gold); outline: 0; }
+.custom-auction-document { line-height: 0; width: 100%; }
+.custom-auction-upper-crop { aspect-ratio: 942 / 1700; line-height: 0; overflow: hidden; position: relative; width: 100%; }
+.custom-auction-upper-crop img { height: auto; left: 0; position: absolute; top: 0; width: 100%; }
+.custom-auction-lower-crop { aspect-ratio: 942 / 1520; line-height: 0; overflow: hidden; position: relative; width: 100%; }
+.custom-auction-lower-crop img { height: auto; left: 0; position: absolute; top: 0; transform: translateY(-13.7%); width: 100%; }
+.custom-auction-copy { width: 100%; }
+.custom-auction-copy .kicker { margin-bottom: 15px; }
+.custom-auction-copy h3 { font-family: "ActsEditorial", Georgia, serif; font-size: 29px; letter-spacing: -0.035em; line-height: 1.08; margin: 0; }
+.custom-auction-copy > p:last-child { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 17px 0 0; }
 .script-stack { margin: 0 auto; max-width: 1240px; min-height: 660px; perspective: 1400px; position: relative; width: 100%; }
 .script-card {
   --card-left: 50%;
@@ -418,6 +465,11 @@ video:focus-visible {
 .script-card-3 { --card-left: 50%; --card-y: 18px; --card-r: 0deg; z-index: 3; }
 .script-card-4 { --card-left: 68.5%; --card-y: 58px; --card-r: 4deg; z-index: 2; }
 .script-card-5 { --card-left: 87%; --card-y: 110px; --card-r: 8deg; z-index: 1; }
+.script-stack-condensed .script-card { height: 515px; width: 300px; }
+.script-stack-condensed .script-card-1 { --card-left: 20%; }
+.script-stack-condensed .script-card-2 { --card-left: 35%; }
+.script-stack-condensed .script-card-4 { --card-left: 65%; }
+.script-stack-condensed .script-card-5 { --card-left: 80%; }
 .script-preview-link { display: block; overflow: hidden; position: relative; }
 .script-card img { aspect-ratio: 210 / 297; border-bottom: 1px solid var(--border); height: auto; object-fit: cover; object-position: top; transition: transform 0.25s ease; width: 100%; }
 .script-card:hover img { transform: scale(1.012); }
@@ -602,6 +654,10 @@ footer > p { color: var(--muted); font-size: 10px; grid-column: 1 / -1; margin: 
   .testing-hero { grid-template-columns: 1fr 0.55fr; }
   .script-stack { min-height: 590px; }
   .script-card { height: 470px; width: 276px; }
+  .script-stack-condensed .script-card { height: 460px; width: 270px; }
+  .script-showcase-layout { gap: 28px; grid-template-columns: 252px minmax(0, 1fr); }
+  .custom-auction-phone { width: 246px; }
+  .custom-auction-copy h3 { font-size: 25px; }
   .script-card-1 { --card-left: 15%; }
   .script-card-2 { --card-left: 32.5%; }
   .script-card-4 { --card-left: 67.5%; }
@@ -629,9 +685,16 @@ footer > p { color: var(--muted); font-size: 10px; grid-column: 1 / -1; margin: 
   .final-cta > div { grid-column: 1 / -1; }
   .testing-hero { grid-template-columns: 1fr; }
   .script-heading { align-items: start; gap: 24px; grid-template-columns: 1fr; }
+  .script-showcase-layout { gap: 44px; grid-template-columns: 1fr; }
+  .custom-auction-feature { align-items: center; display: grid; gap: 34px; grid-template-columns: minmax(220px, 270px) minmax(0, 1fr); }
+  .custom-auction-phone { width: 258px; }
+  .custom-auction-copy { max-width: 430px; }
+  .custom-auction-copy h3 { font-size: 30px; }
   .script-stack { display: grid; gap: 18px; grid-auto-columns: 280px; grid-auto-flow: column; min-height: auto; overflow-x: auto; padding: 32px 4px 42px; scroll-snap-type: x mandatory; }
   .script-card,
   .script-card:hover { height: 470px; left: auto; position: relative; scroll-snap-align: start; top: auto; transform: none; width: 100%; }
+  .script-stack-condensed .script-card,
+  .script-stack-condensed .script-card:hover { height: 470px; width: 100%; }
 }
 
 @media (max-width: 620px) {
@@ -677,9 +740,15 @@ footer > p { color: var(--muted); font-size: 10px; grid-column: 1 / -1; margin: 
   .script-heading { margin-bottom: 44px; }
   .script-heading h2 { font-size: 40px; }
   .script-download-all { width: 100%; }
+  .custom-auction-feature { display: flex; gap: 28px; }
+  .custom-auction-phone { width: min(100%, 270px); }
+  .custom-auction-copy { max-width: 360px; }
+  .custom-auction-copy h3 { font-size: 28px; }
   .script-stack { gap: 14px; grid-auto-columns: 255px; padding: 22px 3px 30px; }
   .script-card,
   .script-card:hover { height: 445px; }
+  .script-stack-condensed .script-card,
+  .script-stack-condensed .script-card:hover { height: 445px; }
   .script-card-footer { align-items: stretch; flex-direction: column; }
   .script-card-download { justify-content: center; width: 100%; }
   .tier-card { padding: 28px 22px; }

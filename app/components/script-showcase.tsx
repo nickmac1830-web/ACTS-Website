@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Download, ExternalLink } from "lucide-react";
+import { CustomAuctionPhone } from "./custom-auction-phone";
 
 const scripts = [
   {
@@ -57,30 +58,41 @@ export function ScriptShowcase() {
         </div>
       </div>
 
-      <div className="script-stack" aria-label="ACTS sample script collection">
-        {scripts.map((script, index) => (
-          <article className={`script-card script-card-${index + 1}`} key={script.id}>
-            <a
-              className="script-preview-link"
-              href={script.pdf}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Open ${script.title} sample PDF`}
-            >
-              <Image src={script.preview} alt={`First page of the ACTS ${script.title} sample`} width={910} height={1287} unoptimized />
-              <span className="script-open-cue"><ExternalLink size={14} aria-hidden="true" /> Open PDF</span>
-            </a>
-            <div className="script-card-footer">
-              <span>
-                <strong>{script.title}</strong>
-                <small>{script.detail}</small>
-              </span>
-              <a className="script-card-download" href={script.pdf} download aria-label={`Download ${script.title} PDF`}>
-                <Download size={15} aria-hidden="true" /> Download
+      <div className="script-showcase-layout">
+        <aside className="custom-auction-feature">
+          <CustomAuctionPhone />
+          <div className="custom-auction-copy">
+            <p className="kicker">Tailored practice</p>
+            <h3>Customise every auction to your training needs.</h3>
+            <p>Choose the features, bid types, negotiation paths and event frequency that match the skills you want to develop.</p>
+          </div>
+        </aside>
+
+        <div className="script-stack script-stack-condensed" aria-label="ACTS sample script collection">
+          {scripts.map((script, index) => (
+            <article className={`script-card script-card-${index + 1}`} key={script.id}>
+              <a
+                className="script-preview-link"
+                href={script.pdf}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${script.title} sample PDF`}
+              >
+                <Image src={script.preview} alt={`First page of the ACTS ${script.title} sample`} width={910} height={1287} unoptimized />
+                <span className="script-open-cue"><ExternalLink size={14} aria-hidden="true" /> Open PDF</span>
               </a>
-            </div>
-          </article>
-        ))}
+              <div className="script-card-footer">
+                <span>
+                  <strong>{script.title}</strong>
+                  <small>{script.detail}</small>
+                </span>
+                <a className="script-card-download" href={script.pdf} download aria-label={`Download ${script.title} PDF`}>
+                  <Download size={15} aria-hidden="true" /> Download
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
