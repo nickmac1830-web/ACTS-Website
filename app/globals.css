@@ -390,7 +390,19 @@ video:focus-visible {
 .script-download-all { min-width: 210px; }
 .script-showcase-layout { align-items: start; display: grid; gap: 42px; grid-template-columns: 292px minmax(0, 1fr); margin: 0 auto; max-width: 1240px; }
 .custom-auction-feature { align-items: center; display: flex; flex-direction: column; gap: 28px; min-width: 0; }
-.custom-auction-phone-wrap { display: flex; justify-content: center; width: 100%; }
+.custom-auction-phone-wrap { align-items: center; display: flex; flex-direction: column; justify-content: center; width: 100%; }
+.custom-auction-scroll-cue {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+  text-align: center;
+}
+.custom-auction-scroll-cue::before { background: var(--gold); content: ""; height: 1px; width: 22px; }
 .custom-auction-phone {
   background: #17191b;
   border: 6px solid #252c31;
@@ -413,6 +425,7 @@ video:focus-visible {
 .custom-auction-footer { bottom: 0; height: 12.2%; }
 .custom-auction-footer img { bottom: 0; }
 .custom-auction-scroll {
+  -webkit-overflow-scrolling: touch;
   bottom: 12.15%;
   left: 0;
   overflow-x: hidden;
@@ -427,10 +440,12 @@ video:focus-visible {
 .custom-auction-scroll::-webkit-scrollbar { display: none; height: 0; width: 0; }
 .custom-auction-scroll:focus-visible { box-shadow: inset 0 0 0 2px var(--gold); outline: 0; }
 .custom-auction-document { line-height: 0; width: 100%; }
-.custom-auction-upper-crop { aspect-ratio: 942 / 1700; line-height: 0; overflow: hidden; position: relative; width: 100%; }
-.custom-auction-upper-crop img { height: auto; left: 0; position: absolute; top: 0; width: 100%; }
-.custom-auction-lower-crop { aspect-ratio: 942 / 1520; line-height: 0; overflow: hidden; position: relative; width: 100%; }
-.custom-auction-lower-crop img { height: auto; left: 0; position: absolute; top: 0; transform: translateY(-13.7%); width: 100%; }
+.custom-auction-content-crop { line-height: 0; overflow: hidden; position: relative; width: 100%; }
+.custom-auction-content-crop img { height: auto; left: 0; position: absolute; top: 0; width: 100%; }
+.custom-auction-content-top { aspect-ratio: 942 / 1542; }
+.custom-auction-content-top img { transform: translateY(-12.22%); }
+.custom-auction-content-bottom { aspect-ratio: 942 / 1383; }
+.custom-auction-content-bottom img { transform: translateY(-19.89%); }
 .custom-auction-copy { width: 100%; }
 .custom-auction-copy .kicker { margin-bottom: 15px; }
 .custom-auction-copy h3 { font-family: "ActsEditorial", Georgia, serif; font-size: 29px; letter-spacing: -0.035em; line-height: 1.08; margin: 0; }
