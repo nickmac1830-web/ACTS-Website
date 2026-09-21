@@ -176,20 +176,20 @@ export default function Home() {
       <section className="demo-section" id="demo">
         <div className="demo-copy">
           <p className="kicker">See the pressure. See the process.</p>
-          <h2>One auction. Dozens of decisions.</h2>
+          <h2>One auction. Every decision in motion.</h2>
           <p>
-            Set the difficulty, bidder count, pace and auction features. Then work through the sequence as totals change, bidders respond and real auction events demand a decision.
+            Watch ACTS move from setup into a live simulated auction—where totals change, bidders interact and real-world interruptions test the next call.
           </p>
           <div className="demo-points">
-            <div><span>43</span><p>steps in the included competition-level sample script</p></div>
-            <div><span>3</span><p>bidders with distinct interactions and bid types</p></div>
-            <div><span>1</span><p>clear performance review at the end of the session</p></div>
+            <div><span>30</span><p>up to 30 bids in a complete simulated auction</p></div>
+            <div><span>6</span><p>auction difficulty settings, from Beginner to Calculator</p></div>
+            <div><span>1</span><p>clear performance review after every completed session</p></div>
           </div>
-          <a className="download-link" href="#scripts">
-            <ArrowDown size={18} /> Explore the sample auction scripts
+          <a className="download-link" href="#demo-video">
+            <Play size={17} fill="currentColor" /> Watch the 34-second ACTS walkthrough
           </a>
         </div>
-        <div className="iphone-demo-wrap">
+        <div className="iphone-demo-wrap" id="demo-video">
           <div className="iphone-demo" aria-label="ACTS walkthrough shown inside an iPhone 17 Pro Max frame">
             <span className="iphone-action-button" aria-hidden="true" />
             <span className="iphone-volume-up" aria-hidden="true" />
