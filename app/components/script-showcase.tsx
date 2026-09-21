@@ -45,11 +45,11 @@ export function ScriptShowcase() {
       <div className="script-heading">
         <div>
           <p className="kicker">Generated inside ACTS</p>
-          <h2 id="script-heading">Sample scripts. Endless training opportunities.</h2>
+          <h2 id="script-heading">One platform. Endless training opportunities.</h2>
         </div>
         <div className="script-heading-actions">
           <p>
-            These five real documents are a sample of the scripts ACTS can generate across auction and training modes. Open any script for a closer look, download the exact one you want, or take the complete sample set.
+            Preview five real documents at a glance—just a selection from the virtually limitless script combinations available across 10+ auction and training categories. Open any script for a closer look, download the exact one you want, or take the complete sample set.
           </p>
           <a className="gold-button script-download-all" href="/media/acts-sample-script-pack.zip" download>
             <Download size={16} aria-hidden="true" /> Download all five
