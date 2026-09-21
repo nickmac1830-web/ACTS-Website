@@ -127,8 +127,18 @@ export default function Home() {
         <div className="hero-visual" aria-label="ACTS app preview">
           <div className="phone phone-hero">
             <Image
-              src="/media/splash.webp"
-              alt="ACTS Auctioneer Training start screen"
+              className="hero-screenshot-light"
+              src="/media/hero-light.jpg"
+              alt="ACTS Auctioneer Training light-mode start screen"
+              width={942}
+              height={2046}
+              priority
+              unoptimized
+            />
+            <Image
+              className="hero-screenshot-dark"
+              src="/media/hero-dark.jpg"
+              alt="ACTS Auctioneer Training dark-mode start screen"
               width={942}
               height={2046}
               priority
