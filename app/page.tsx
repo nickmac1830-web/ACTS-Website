@@ -2,25 +2,9 @@ import {
   Apple,
   ArrowDown,
   ArrowRight,
-  BarChart3,
-  Brain,
-  Camera,
   Check,
-  CircleHelp,
-  CreditCard,
   Download,
-  FileText,
-  Gauge,
-  LockKeyhole,
-  Mail,
-  Mic2,
   Play,
-  Scale,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  Users,
-  Video,
 } from "lucide-react";
 import Image from "next/image";
 import { ScreenshotCarousel } from "./components/screenshot-carousel";
@@ -32,32 +16,26 @@ const APP_STORE_URL =
 
 const features = [
   {
-    icon: Target,
     title: "Realistic auction pressure",
     copy: "Train through changing increments, bidder interactions, auction calls, vendor bids, negotiations and real-world interruptions.",
   },
   {
-    icon: Brain,
     title: "Faster mental maths",
     copy: "Build the speed and accuracy to calculate new totals under pressure, from standard increments to competition-level bidding.",
   },
   {
-    icon: Mic2,
     title: "Optional voice control",
     copy: "Call bids and auction actions aloud in supported sessions. Voice recognition is processed on device and remains optional.",
   },
   {
-    icon: Gauge,
     title: "Training that adapts",
     copy: "Choose the sequence, difficulty, bidders, pace and scenario features to target the exact skill you want to sharpen.",
   },
   {
-    icon: FileText,
     title: "Scripts built for practice",
     copy: "Generate detailed auction scripts with bidder columns, totals, call phases, disturbances and reserve-price events.",
   },
   {
-    icon: BarChart3,
     title: "Actionable performance data",
     copy: "Review speed, accuracy, memory, timing, flow and consistency—then use targeted recommendations to train what matters next.",
   },
@@ -121,7 +99,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-glow" aria-hidden="true" />
         <div className="hero-copy">
-          <div className="eyebrow"><Sparkles size={15} /> Purpose-built for auctioneers</div>
+          <div className="eyebrow">Purpose-built for auctioneers</div>
           <h1>Train your auction call <em>before the crowd arrives.</em></h1>
           <p>
             Build speed, accuracy, memory and composure through realistic auction simulations—where every bid, call and decision happens under pressure.
@@ -173,10 +151,9 @@ export default function Home() {
           <p>ACTS gives developing and experienced auctioneers a dedicated place to practise the numbers, sequence and pressure—not just the words.</p>
         </div>
         <div className="feature-grid">
-          {features.map(({ icon: Icon, title, copy }, index) => (
+          {features.map(({ title, copy }, index) => (
             <article className="feature-card" key={title}>
               <div className="feature-number">0{index + 1}</div>
-              <Icon size={26} aria-hidden="true" />
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
@@ -257,7 +234,6 @@ export default function Home() {
       </section>
 
       <section className="section privacy-callout">
-        <ShieldCheck size={34} aria-hidden="true" />
         <div>
           <p className="kicker">Training without the data grab</p>
           <h2>Your training stays on your device.</h2>
@@ -286,11 +262,11 @@ export default function Home() {
           <p>Everything you need is part of this website—clear, easy to find and kept in one place.</p>
         </div>
         <div className="resource-grid">
-          <a href="/support"><CircleHelp size={26} /><span><strong>App support</strong><small>Troubleshooting and subscriptions</small></span><ArrowRight size={18} /></a>
-          <a href="/contact"><Mail size={26} /><span><strong>Contact ACTS</strong><small>Questions, feedback and partnerships</small></span><ArrowRight size={18} /></a>
-          <a href="/privacy"><LockKeyhole size={26} /><span><strong>Privacy policy</strong><small>How ACTS handles your information</small></span><ArrowRight size={18} /></a>
-          <a href="/terms"><Scale size={26} /><span><strong>Terms of use</strong><small>The terms that apply when using ACTS</small></span><ArrowRight size={18} /></a>
-          <a href="/billing"><CreditCard size={26} /><span><strong>Billing information</strong><small>Plans, renewals and cancellations</small></span><ArrowRight size={18} /></a>
+          <a href="/support"><span><strong>App support</strong><small>Troubleshooting and subscriptions</small></span><ArrowRight size={18} /></a>
+          <a href="/contact"><span><strong>Contact ACTS</strong><small>Questions, feedback and partnerships</small></span><ArrowRight size={18} /></a>
+          <a href="/privacy"><span><strong>Privacy policy</strong><small>How ACTS handles your information</small></span><ArrowRight size={18} /></a>
+          <a href="/terms"><span><strong>Terms of use</strong><small>The terms that apply when using ACTS</small></span><ArrowRight size={18} /></a>
+          <a href="/billing"><span><strong>Billing information</strong><small>Plans, renewals and cancellations</small></span><ArrowRight size={18} /></a>
         </div>
       </section>
 
@@ -302,13 +278,13 @@ export default function Home() {
         </div>
         <div className="social-grid" aria-label="ACTS social media profiles">
           <a href="https://www.instagram.com/actsauctioneer" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on Instagram">
-            <Camera size={28} /><strong>Instagram</strong><span>@actsauctioneer</span>
+            <strong>Instagram</strong><span>@actsauctioneer</span>
           </a>
           <a href="https://www.tiktok.com/@actsauctioneer" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on TikTok">
-            <Video size={28} /><strong>TikTok</strong><span>@actsauctioneer</span>
+            <strong>TikTok</strong><span>@actsauctioneer</span>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61594208121787" target="_blank" rel="noopener noreferrer" aria-label="Follow ACTS Auctioneer Training on Facebook">
-            <Users size={28} /><strong>Facebook</strong><span>Visit page</span>
+            <strong>Facebook</strong><span>Visit page</span>
           </a>
         </div>
       </section>
