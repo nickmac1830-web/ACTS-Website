@@ -45,7 +45,7 @@ export function ScriptShowcase() {
       <div className="script-heading">
         <div>
           <p className="kicker">Generated inside ACTS</p>
-          <h2 id="script-heading">Sample scripts. Broader training by design.</h2>
+          <h2 id="script-heading">Sample scripts. Endless training opportunities.</h2>
         </div>
         <div className="script-heading-actions">
           <p>
