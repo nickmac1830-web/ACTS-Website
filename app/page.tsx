@@ -181,9 +181,9 @@ export default function Home() {
             Watch ACTS move from setup into a live simulated auction—where totals change, bidders interact and real-world interruptions test the next call.
           </p>
           <div className="demo-points">
-            <div><span>30</span><p>up to 30 bids in a complete simulated auction</p></div>
-            <div><span>6</span><p>auction difficulty settings, from Beginner to Calculator</p></div>
-            <div><span>1</span><p>clear performance review after every completed session</p></div>
+            <div><span>50+</span><p>possible auction steps across a complete simulation</p></div>
+            <div><span>6</span><p>calibrated difficulty levels, from Beginner to Calculator</p></div>
+            <div><span>1</span><p>clear objective: stronger auctioneering performance</p></div>
           </div>
           <a className="download-link" href="#demo-video">
             <Play size={17} fill="currentColor" /> Watch the 34-second ACTS walkthrough
