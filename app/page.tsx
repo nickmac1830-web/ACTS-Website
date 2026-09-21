@@ -81,14 +81,14 @@ const tiers = [
 ];
 
 const screenshots = [
-  { src: "/media/hub.webp", alt: "ACTS hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
-  { src: "/media/training.webp", alt: "ACTS memory training session with a live auctioneer prompt", label: "Build memory under pressure" },
-  { src: "/media/live-auction.webp", alt: "ACTS live auction number entry and voice controls", label: "Respond in real time" },
-  { src: "/media/script-viewer.webp", alt: "ACTS generated auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
-  { src: "/media/saved-scripts.webp", alt: "ACTS saved auction scripts ready to visualise or run", label: "Save and repeat key scenarios" },
-  { src: "/media/summary.webp", alt: "ACTS auction performance summary", label: "See the full result" },
-  { src: "/media/analytics.webp", alt: "ACTS advanced performance analytics", label: "Find your next improvement" },
-  { src: "/media/progress.webp", alt: "ACTS progress summary showing score, runtime and improvement over saved runs", label: "Track improvement over time" },
+  { src: "/media/hub.webp", alt: "ACTS light-mode training hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
+  { src: "/media/setup.webp", alt: "ACTS light-mode auction controls for sequence, difficulty, bidders and pace", label: "Shape every training session" },
+  { src: "/media/training.webp", alt: "ACTS light-mode memory training drill with a live bidder prompt", label: "Build memory under pressure" },
+  { src: "/media/live-auction.webp", alt: "ACTS light-mode live auction screen with number entry and optional voice control", label: "Respond in real time" },
+  { src: "/media/script-viewer.webp", alt: "ACTS light-mode auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
+  { src: "/media/summary.webp", alt: "ACTS light-mode auction summary with score, timing and accuracy", label: "See the full result" },
+  { src: "/media/analytics.webp", alt: "ACTS light-mode performance web comparing core auction skills", label: "Find your next improvement" },
+  { src: "/media/progress.webp", alt: "ACTS light-mode progress summary showing average score and runtime", label: "Track improvement over time" },
 ];
 
 export default function Home() {
