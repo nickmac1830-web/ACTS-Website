@@ -21,7 +21,7 @@ export function ThemeToggle() {
       aria-label="Toggle light and dark mode"
       title="Toggle light and dark mode"
     >
-      <Moon className="theme-icon-moon" size={18} strokeWidth={1.6} aria-hidden="true" />
+      <Moon className="theme-icon-moon" size={20} fill="currentColor" strokeWidth={0} aria-hidden="true" />
       <Sun className="theme-icon-sun" size={18} strokeWidth={1.6} aria-hidden="true" />
     </button>
   );

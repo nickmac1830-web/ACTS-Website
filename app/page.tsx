@@ -3,10 +3,10 @@ import {
   ArrowDown,
   ArrowRight,
   Check,
-  Download,
   Play,
 } from "lucide-react";
 import Image from "next/image";
+import { ScriptShowcase } from "./components/script-showcase";
 import { ScreenshotCarousel } from "./components/screenshot-carousel";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
@@ -74,6 +74,7 @@ const tiers = [
       "Advanced analytical reports",
       "Custom script generation",
       "Save and reopen scripts",
+      "Save favourite settings as presets",
       "Visual and audio practice modes",
       "Voice control on supported devices",
     ],
@@ -82,9 +83,10 @@ const tiers = [
 
 const screenshots = [
   { src: "/media/hub.webp", alt: "ACTS light-mode training hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
-  { src: "/media/setup.webp", alt: "ACTS light-mode auction controls for sequence, difficulty, bidders and pace", label: "Shape every training session" },
-  { src: "/media/training.webp", alt: "ACTS light-mode memory training drill with a live bidder prompt", label: "Build memory under pressure" },
-  { src: "/media/live-auction.webp", alt: "ACTS light-mode live auction screen with number entry and optional voice control", label: "Respond in real time" },
+  { src: "/media/setup.webp", alt: "ACTS light-mode auction simulator settings for sequence, difficulty, bidders and pace", label: "Set up a complete auction" },
+  { src: "/media/live-auction.webp", alt: "ACTS light-mode live auction simulator with number entry and optional voice control", label: "Run the auction in real time" },
+  { src: "/media/training-settings.webp", alt: "ACTS light-mode training settings with sequence, difficulty, memory time, bid range, bidders and mode", label: "Fine-tune every training drill" },
+  { src: "/media/training.webp", alt: "ACTS light-mode memory training screen with a live bidder prompt", label: "Build memory under pressure" },
   { src: "/media/script-viewer.webp", alt: "ACTS light-mode auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
   { src: "/media/summary.webp", alt: "ACTS light-mode auction summary with score, timing and accuracy", label: "See the full result" },
   { src: "/media/analytics.webp", alt: "ACTS light-mode performance web comparing core auction skills", label: "Find your next improvement" },
@@ -173,16 +175,24 @@ export default function Home() {
             <div><span>3</span><p>bidders with distinct interactions and bid types</p></div>
             <div><span>1</span><p>clear performance review at the end of the session</p></div>
           </div>
-          <a className="download-link" href="/media/sample-auction-script.pdf" download>
-            <Download size={19} /> Download a sample auction script
+          <a className="download-link" href="#scripts">
+            <ArrowDown size={18} /> Explore the sample auction scripts
           </a>
         </div>
-        <div className="video-shell">
-          <video controls playsInline preload="metadata" poster="/media/demo-poster.webp">
-            <source src="/media/acts-demo.mp4" type="video/mp4" />
-            Your browser does not support embedded video.
-          </video>
-          <p><span aria-hidden="true" /> 34-second ACTS walkthrough</p>
+        <div className="iphone-demo-wrap">
+          <div className="iphone-demo" aria-label="ACTS walkthrough shown inside an iPhone 17 Pro Max frame">
+            <span className="iphone-action-button" aria-hidden="true" />
+            <span className="iphone-volume-up" aria-hidden="true" />
+            <span className="iphone-volume-down" aria-hidden="true" />
+            <div className="iphone-demo-screen">
+              <span className="dynamic-island" aria-hidden="true" />
+              <video controls playsInline preload="metadata" poster="/media/demo-poster.webp">
+                <source src="/media/acts-demo.mp4" type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            </div>
+          </div>
+          <p className="iphone-demo-caption"><span aria-hidden="true" /> 34-second ACTS walkthrough</p>
         </div>
       </section>
 
@@ -196,6 +206,8 @@ export default function Home() {
         </div>
         <ScreenshotCarousel screenshots={screenshots} />
       </section>
+
+      <ScriptShowcase />
 
       <section className="pricing-section" id="pricing">
         <div className="pricing-intro">
