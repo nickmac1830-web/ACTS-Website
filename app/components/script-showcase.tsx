@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { Download, ExternalLink } from "lucide-react";
-import { useState } from "react";
 
 const scripts = [
   {
@@ -43,86 +40,47 @@ const scripts = [
 ] as const;
 
 export function ScriptShowcase() {
-  const [selectedId, setSelectedId] = useState<(typeof scripts)[number]["id"]>("full-auction");
-  const selected = scripts.find((script) => script.id === selectedId) ?? scripts[0];
-
   return (
     <section className="script-section" id="scripts" aria-labelledby="script-heading">
       <div className="script-heading">
         <div>
           <p className="kicker">Generated inside ACTS</p>
-          <h2 id="script-heading">See the script before you run the room.</h2>
+          <h2 id="script-heading">Five scripts. Five ways to train.</h2>
         </div>
-        <p>
-          Explore five real PDFs: three auction scenarios and two focused training drills. Select any document to inspect it on the phone, open it full screen or download it for practice.
-        </p>
+        <div className="script-heading-actions">
+          <p>
+            Preview all five real documents at a glance. Open any script for a closer look, download the exact one you want, or take the complete sample set.
+          </p>
+          <a className="gold-button script-download-all" href="/media/acts-sample-script-pack.zip" download>
+            <Download size={16} aria-hidden="true" /> Download all five
+          </a>
+        </div>
       </div>
 
-      <div className="script-showcase">
-        <div className="script-phone-column">
-          <div className="script-iphone" aria-label={`${selected.title} PDF shown inside an iPhone 17 Pro Max frame`}>
-            <span className="iphone-action-button" aria-hidden="true" />
-            <span className="iphone-volume-up" aria-hidden="true" />
-            <span className="iphone-volume-down" aria-hidden="true" />
-            <div className="script-iphone-screen">
-              <span className="dynamic-island" aria-hidden="true" />
-              <iframe
-                key={selected.pdf}
-                className="script-pdf"
-                src={`${selected.pdf}#view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                title={`${selected.title} ACTS sample PDF`}
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="script-viewer-heading">
-            <div>
-              <span>Selected sample</span>
-              <strong>{selected.title}</strong>
-              <small>{selected.detail}</small>
-            </div>
-            <span className="script-format">PDF</span>
-          </div>
-          <div className="script-actions">
-            <a className="gold-button" href={selected.pdf} download>
-              <Download size={16} aria-hidden="true" /> Download PDF
-            </a>
-            <a className="script-open-link" href={selected.pdf} target="_blank" rel="noreferrer">
-              Open full screen <ExternalLink size={15} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-
-        <div className="script-browser">
-          <div className="script-switcher" aria-label="Select a sample script">
-            {scripts.map((script, index) => (
-              <button
-                type="button"
-                key={script.id}
-                className={selected.id === script.id ? "active" : ""}
-                onClick={() => setSelectedId(script.id)}
-                aria-pressed={selected.id === script.id}
-              >
-                <span>0{index + 1}</span> {script.title}
-              </button>
-            ))}
-          </div>
-          <div className="script-stack" aria-label="Choose a sample ACTS script">
-          {scripts.map((script, index) => (
-            <button
-              className={`script-card script-card-${index + 1}${selected.id === script.id ? " selected" : ""}`}
-              type="button"
-              key={script.id}
-              onClick={() => setSelectedId(script.id)}
-              aria-pressed={selected.id === script.id}
-              aria-label={`Preview ${script.title} script`}
+      <div className="script-stack" aria-label="ACTS sample script collection">
+        {scripts.map((script, index) => (
+          <article className={`script-card script-card-${index + 1}`} key={script.id}>
+            <a
+              className="script-preview-link"
+              href={script.pdf}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${script.title} sample PDF`}
             >
-              <Image src={script.preview} alt="" width={760} height={1075} unoptimized />
-              <span><strong>{script.title}</strong><small>{script.detail}</small></span>
-            </button>
-          ))}
-          </div>
-        </div>
+              <Image src={script.preview} alt={`First page of the ACTS ${script.title} sample`} width={910} height={1287} unoptimized />
+              <span className="script-open-cue"><ExternalLink size={14} aria-hidden="true" /> Open PDF</span>
+            </a>
+            <div className="script-card-footer">
+              <span>
+                <strong>{script.title}</strong>
+                <small>{script.detail}</small>
+              </span>
+              <a className="script-card-download" href={script.pdf} download aria-label={`Download ${script.title} PDF`}>
+                <Download size={15} aria-hidden="true" /> Download
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
