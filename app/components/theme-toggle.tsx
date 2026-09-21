@@ -1,7 +1,5 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
-
 const STORAGE_KEY = "acts-website-theme";
 
 export function ThemeToggle() {
@@ -21,8 +19,9 @@ export function ThemeToggle() {
       aria-label="Toggle light and dark mode"
       title="Toggle light and dark mode"
     >
-      <Moon className="theme-icon-moon" size={20} fill="currentColor" strokeWidth={0} aria-hidden="true" />
-      <Sun className="theme-icon-sun" size={18} strokeWidth={1.6} aria-hidden="true" />
+      <svg className="theme-moon" viewBox="0 0 32 32" role="presentation" aria-hidden="true">
+        <path d="M25.7 23.9A11.7 11.7 0 0 1 10.1 6.5a12.7 12.7 0 1 0 15.6 17.4Z" />
+      </svg>
     </button>
   );
 }

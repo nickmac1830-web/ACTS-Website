@@ -82,15 +82,15 @@ const tiers = [
 ];
 
 const screenshots = [
-  { src: "/media/hub.webp", alt: "ACTS light-mode training hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
-  { src: "/media/setup.webp", alt: "ACTS light-mode auction simulator settings for sequence, difficulty, bidders and pace", label: "Set up a complete auction" },
-  { src: "/media/live-auction.webp", alt: "ACTS light-mode live auction simulator with number entry and optional voice control", label: "Run the auction in real time" },
-  { src: "/media/training-settings.webp", alt: "ACTS light-mode training settings with sequence, difficulty, memory time, bid range, bidders and mode", label: "Fine-tune every training drill" },
-  { src: "/media/training.webp", alt: "ACTS light-mode memory training screen with a live bidder prompt", label: "Build memory under pressure" },
-  { src: "/media/script-viewer.webp", alt: "ACTS light-mode auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
-  { src: "/media/summary.webp", alt: "ACTS light-mode auction summary with score, timing and accuracy", label: "See the full result" },
-  { src: "/media/analytics.webp", alt: "ACTS light-mode performance web comparing core auction skills", label: "Find your next improvement" },
-  { src: "/media/progress.webp", alt: "ACTS light-mode progress summary showing average score and runtime", label: "Track improvement over time" },
+  { src: "/media/hub.webp", darkSrc: "/media/hub-dark.webp", alt: "ACTS light-mode training hub with simulator, drills, activity and script generator", label: "Everything in one training hub" },
+  { src: "/media/setup.webp", darkSrc: "/media/setup-dark.webp", alt: "ACTS light-mode auction simulator settings for sequence, difficulty, bidders and pace", label: "Set up a complete auction" },
+  { src: "/media/live-auction.webp", darkSrc: "/media/live-auction-dark.webp", alt: "ACTS light-mode live auction simulator with number entry and optional voice control", label: "Run the auction in real time" },
+  { src: "/media/training-settings.webp", darkSrc: "/media/training-settings-dark.webp", alt: "ACTS light-mode training settings with sequence, difficulty, memory time, bid range, bidders and mode", label: "Fine-tune every training drill" },
+  { src: "/media/training.webp", darkSrc: "/media/training-dark.webp", alt: "ACTS light-mode memory training screen with a live bidder prompt", label: "Build memory under pressure" },
+  { src: "/media/script-viewer.webp", darkSrc: "/media/script-viewer-dark.webp", alt: "ACTS light-mode auction script with bidders, bid types and running totals", label: "Visualise every auction step" },
+  { src: "/media/summary.webp", darkSrc: "/media/summary-dark.webp", alt: "ACTS light-mode auction summary with score, timing and accuracy", label: "See the full result" },
+  { src: "/media/analytics.webp", darkSrc: "/media/analytics-dark.webp", alt: "ACTS light-mode performance web comparing core auction skills", label: "Find your next improvement" },
+  { src: "/media/progress.webp", darkSrc: "/media/progress-dark.webp", alt: "ACTS light-mode progress summary showing average score and runtime", label: "Track improvement over time" },
 ];
 
 export default function Home() {

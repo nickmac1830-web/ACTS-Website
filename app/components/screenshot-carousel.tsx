@@ -6,6 +6,7 @@ import { useRef } from "react";
 
 type Screenshot = {
   src: string;
+  darkSrc: string;
   alt: string;
   label: string;
 };
@@ -40,7 +41,8 @@ export function ScreenshotCarousel({ screenshots }: { screenshots: Screenshot[] 
           <figure key={shot.src}>
             <span>{String(index + 1).padStart(2, "0")}</span>
             <div className="phone">
-              <Image src={shot.src} alt={shot.alt} width={942} height={2046} loading="lazy" unoptimized />
+              <Image className="theme-screen-light" src={shot.src} alt={shot.alt} width={942} height={2046} loading="lazy" unoptimized />
+              <Image className="theme-screen-dark" src={shot.darkSrc} alt={`${shot.alt.replace("light-mode", "dark-mode")}`} width={942} height={2046} loading="lazy" unoptimized />
             </div>
             <figcaption>{shot.label}</figcaption>
           </figure>
