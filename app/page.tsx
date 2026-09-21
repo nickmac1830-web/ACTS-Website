@@ -106,11 +106,11 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="app-store-button" href={APP_STORE_URL} target="_blank" rel="noreferrer">
-              <Apple size={30} fill="currentColor" aria-hidden="true" />
+              <Apple size={26} fill="currentColor" strokeWidth={1.6} aria-hidden="true" />
               <span><small>Download on the</small><strong>App Store</strong></span>
             </a>
             <a className="play-store-soon play-store-link" href="/android-testing" aria-label="Join ACTS Android testing">
-              <Play size={23} fill="currentColor" aria-hidden="true" />
+              <Play size={20} fill="currentColor" strokeWidth={1.6} aria-hidden="true" />
               <span><small>Join the</small><strong>Android Test</strong></span>
             </a>
             <a className="text-button" href="#demo">Watch the app in action <ArrowDown size={17} /></a>
@@ -296,11 +296,11 @@ export default function Home() {
           <p className="final-cta-note">Free to download. A paid subscription is required for access.</p>
         </div>
         <a className="app-store-button light" href={APP_STORE_URL} target="_blank" rel="noreferrer">
-          <Apple size={30} fill="currentColor" aria-hidden="true" />
+          <Apple size={26} fill="currentColor" strokeWidth={1.6} aria-hidden="true" />
           <span><small>Download on the</small><strong>App Store</strong></span>
         </a>
         <a className="play-store-soon play-store-link dark" href="/android-testing" aria-label="Join ACTS Android testing">
-          <Play size={23} fill="currentColor" aria-hidden="true" />
+          <Play size={20} fill="currentColor" strokeWidth={1.6} aria-hidden="true" />
           <span><small>Join the</small><strong>Android Test</strong></span>
         </a>
       </section>
