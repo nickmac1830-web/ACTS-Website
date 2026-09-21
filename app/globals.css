@@ -373,6 +373,7 @@ video:focus-visible {
 .screenshot-rail figure { margin: 0; position: relative; scroll-snap-align: start; }
 .screenshot-rail figure > span { color: var(--gold-strong); font-family: "ActsEditorial", serif; font-size: 12px; left: 4px; position: absolute; top: -27px; }
 .screenshot-rail .phone { aspect-ratio: 942 / 2046; }
+:root[data-theme="dark"] .screenshot-rail .phone { border-color: #f6f3ed; }
 .theme-screen-dark { display: none; }
 :root[data-theme="dark"] .theme-screen-light { display: none; }
 :root[data-theme="dark"] .theme-screen-dark { display: block; }
