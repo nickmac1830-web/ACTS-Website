@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: "Optional voice control",
-    copy: "Call bids and auction actions aloud in supported sessions. Voice recognition is processed on device and remains optional.",
+    copy: "Call bids and auction actions aloud in supported sessions. iOS voice recognition stays on device. Android online speech is optional and requires your permission.",
   },
   {
     title: "Training that adapts",
@@ -251,7 +251,7 @@ export default function Home() {
           ))}
         </div>
 
-        <p className="pricing-note">Prices shown in AUD for the Australian App Store. Apple confirms the final price before purchase. Subscriptions auto-renew unless cancelled. Voice control requires a supported device; manual controls remain available.</p>
+        <p className="pricing-note">Prices shown in AUD for the Australian App Store. Apple or Google Play confirms the final local price before purchase. Subscriptions auto-renew unless cancelled. Voice control requires a supported device; manual controls remain available.</p>
         <a className="gold-button" href={APP_STORE_URL} target="_blank" rel="noreferrer">View ACTS on the App Store <ArrowRight size={18} /></a>
       </section>
 
@@ -260,7 +260,7 @@ export default function Home() {
           <p className="kicker">Training without the data grab</p>
           <h2>Your training stays on your device.</h2>
         </div>
-        <p>ACTS requires no account. Auction scripts, scores, bid history, settings and training results are stored locally. Optional voice control uses on-device Apple speech recognition.</p>
+        <p>ACTS requires no account. Auction scripts, scores, bid history, settings and training results are stored locally. Optional iOS voice control uses on-device Apple speech recognition. Android offers on-device recognition or, with your consent, the phone’s system speech service.</p>
       </section>
 
       <section className="section faq-section" id="faq">
@@ -274,7 +274,7 @@ export default function Home() {
           <details><summary>What is included in ACTS Standard?<span>+</span></summary><p>Standard includes two auction difficulty settings, three training modules, basic review and scoring, and visual practice mode.</p></details>
           <details><summary>What does ACTS Pro unlock?<span>+</span></summary><p>ACTS Pro unlocks advanced training configurations, analytical insights, pattern analysis, training recommendations and other premium tools shown inside the app.</p></details>
           <details><summary>Will voice control work on every device?<span>+</span></summary><p>No. Voice control is a Pro feature on supported devices and depends on compatible speech-recognition services and hardware. Manual controls remain available.</p></details>
-          <details><summary>Is ACTS available outside Australia?<span>+</span></summary><p>ACTS is available through supported App Store regions. Prices and availability are displayed by Apple for your account region.</p></details>
+          <details><summary>Is ACTS available outside Australia?<span>+</span></summary><p>ACTS is available through supported App Store regions; Android testing is available through our testing programme. Apple or Google Play displays prices and availability for your account region.</p></details>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import { env } from "cloudflare:workers";
+import { csvCell, isAuthorised } from "../../../lib/tester-privacy";
 
 export const runtime = "edge";
 
@@ -48,16 +49,6 @@ function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-function csvCell(value: string | null) {
-  const text = value ?? "";
-  return `"${text.replaceAll('"', '""')}"`;
-}
-
-function isAuthorised(request: Request, adminKey: string) {
-  const supplied = request.headers.get("authorization");
-  return supplied === `Bearer ${adminKey}`;
-}
-
 export async function POST(request: Request) {
   const runtimeEnv = getRuntimeEnv();
   if (!runtimeEnv.DB) {
@@ -68,6 +59,10 @@ export async function POST(request: Request) {
   try {
     payload = (await request.json()) as Record<string, unknown>;
   } catch {
+    return json({ error: "Please check the form and try again." }, 400);
+  }
+
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     return json({ error: "Please check the form and try again." }, 400);
   }
 
@@ -185,5 +180,35 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error("Unable to load Android tester registrations", error);
     return json({ error: "Registrations could not be loaded. Please try again." }, 500);
+  }
+}
+
+// Administrator action for a verified withdrawal/deletion request. The public
+// form never accepts a deletion, and the bearer key is never put in a URL.
+export async function DELETE(request: Request) {
+  const runtimeEnv = getRuntimeEnv();
+  if (!runtimeEnv.DB || !runtimeEnv.TESTER_ADMIN_KEY) {
+    return json({ error: "The registrations dashboard is not configured." }, 503);
+  }
+  if (!isAuthorised(request, runtimeEnv.TESTER_ADMIN_KEY)) {
+    return json({ error: "Unauthorised." }, 401);
+  }
+  let payload: Record<string, unknown>;
+  try {
+    payload = await request.json() as Record<string, unknown>;
+  } catch {
+    return json({ error: "Invalid deletion request." }, 400);
+  }
+  const id = cleanText(payload?.id, 100);
+  const email = cleanText(payload?.email, 254).toLowerCase();
+  if (!id || !isEmail(email)) return json({ error: "A registration and matching email are required." }, 400);
+  try {
+    const result = await runtimeEnv.DB.prepare(
+      "DELETE FROM android_testers WHERE id = ? AND google_play_email = ?",
+    ).bind(id, email).run();
+    if (!result.meta.changes) return json({ error: "The matching registration was not found." }, 404);
+    return json({ ok: true });
+  } catch {
+    return json({ error: "The registration could not be deleted." }, 500);
   }
 }

@@ -66,6 +66,26 @@ export function RegistrationsDashboard() {
     URL.revokeObjectURL(url);
   }
 
+  async function deleteRegistration(tester: Tester) {
+    if (!window.confirm(`Delete the registration for ${tester.google_play_email}? Also remove any exported copies and Google Play tester-list entry you manage.`)) return;
+    setLoading(true);
+    setError("");
+    try {
+      const response = await fetch("/api/android-testers", {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${accessCode}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ id: tester.id, email: tester.google_play_email }),
+      });
+      const result = await response.json() as { error?: string };
+      if (!response.ok) throw new Error(result.error || "Deletion failed.");
+      setTesters((rows) => rows?.filter((row) => row.id !== tester.id) ?? null);
+    } catch (deletionError) {
+      setError(deletionError instanceof Error ? deletionError.message : "Deletion failed.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   if (!testers) {
     return (
       <form className="admin-login" onSubmit={loadRegistrations}>
@@ -93,7 +113,7 @@ export function RegistrationsDashboard() {
 
       <div className="registrations-table-wrap">
         <table>
-          <thead><tr><th>Name</th><th>Google Play account</th><th>Stage</th><th>Country</th><th>Device</th><th>Registered</th></tr></thead>
+          <thead><tr><th>Name</th><th>Google Play account</th><th>Stage</th><th>Country</th><th>Device</th><th>Registered</th><th>Privacy requests</th></tr></thead>
           <tbody>
             {testers.map((tester) => (
               <tr key={tester.id}>
@@ -103,6 +123,7 @@ export function RegistrationsDashboard() {
                 <td>{tester.country}</td>
                 <td>{tester.android_device || "—"}</td>
                 <td>{new Date(tester.created_at).toLocaleDateString()}</td>
+                <td><button type="button" disabled={loading} onClick={() => deleteRegistration(tester)}>Delete registration</button></td>
               </tr>
             ))}
           </tbody>

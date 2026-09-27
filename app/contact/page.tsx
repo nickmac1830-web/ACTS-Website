@@ -19,7 +19,7 @@ export default function ContactPage() {
       </div>
 
       <h2>App and subscription support</h2>
-      <p>For a technical problem or ACTS Pro question, first visit <a href="/support">ACTS Support</a>. If you still need help, include your device model, iOS version, ACTS version and a short description of the issue in your email.</p>
+      <p>For a technical problem or Standard or Pro membership question, first visit <a href="/support">ACTS Support</a>. If you still need help, include your device model, iOS or Android version, ACTS version and a short description of the issue in your email.</p>
 
       <h2>Feedback and feature ideas</h2>
       <p>Practical feedback from auctioneers, trainees and real-estate professionals is welcome. Tell us how you use ACTS, which training modes matter most and what would make your practice more effective.</p>

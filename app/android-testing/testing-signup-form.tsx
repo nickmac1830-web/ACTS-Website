@@ -126,7 +126,7 @@ export function TestingSignupForm() {
       </button>
 
       <p className="form-privacy">
-        Registration does not grant immediate access. After approval, ACTS will email the appropriate Google Play joining link. See the <a href="/privacy">Privacy Policy</a>.
+        Registration does not grant immediate access. After approval, ACTS will email the appropriate Google Play joining link. Registration details are stored with Cloudflare and may be used to add your email to Google Play tester lists. This is not a general marketing signup. To withdraw or request deletion, email <a href="mailto:actsauctioneertraining@gmail.com">actsauctioneertraining@gmail.com</a>. See the <a href="/privacy">Privacy Policy</a>.
       </p>
     </form>
   );
