@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": { "minimumBuild": 40102, "minimumVersion": "4.1.2" },
+    "android": { "minimumBuild": 0, "minimumVersion": "4.1.2" }
+  }
+}

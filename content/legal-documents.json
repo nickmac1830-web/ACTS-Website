@@ -8,18 +8,112 @@
     "subtitle": "Your information and your choices",
     "introduction": "This policy covers the ACTS: Auctioneer Training iOS and Android app, actsauctioneer.com, tester registrations and support. ACTS is operated by Nicholas McIntyre, trading as ACTS: Auctioneer Training. Contact actsauctioneertraining@gmail.com about privacy, access, correction, deletion or a complaint.",
     "sections": [
-      {"marker":"LOCAL","title":"Training information on your device","paragraphs":["ACTS does not require an ACTS account. Auction scripts, user-entered names and labels, saved settings, presets, training results, scores, bid history, timing, progress and streaks are stored in the app storage on your device. ACTS does not upload this training information to an ACTS training database or to RevenueCat.","The app also keeps preferences, a cached membership status and dates, and local counters that control reminders, optional upgrade messages and store-rating requests. Your operating system may include app data in a device backup according to its settings. Avoid entering confidential client information that you do not need for practice."]},
-      {"marker":"VOICE","title":"Optional microphone and speech recognition","paragraphs":["Voice control recognises spoken bids and auction commands while you enable the microphone. ACTS uses the recognised words to operate the session. Resulting bids or actions can appear in local session history. ACTS does not keep raw microphone recordings or send them to its own server or RevenueCat.","On iOS, ACTS requires Apple's on-device speech recognition. If that is unavailable, use manual controls; ACTS does not enable a server-based speech fallback on iOS.","In ACTS 4.0.1 and later on Android, ACTS prefers the dedicated on-device recogniser. If you choose Allow online speech in the speech privacy prompt, the enabled Android speech provider may receive microphone audio and process it on its servers to recognise your commands. The provider and its retention practices depend on your device and speech-service settings. Choosing On-device only prevents ACTS from falling back to that system service. You can change this choice in ACTS voice-control settings.","Earlier Android builds may use the system speech provider after microphone permission without the separate ACTS speech privacy choice. Update to 4.0.1 to use the processing controls described above. Voice control is optional. You can decline the privacy prompt, turn the microphone off, revoke microphone or speech permissions in phone settings, and use manual controls. ACTS requests microphone permission before listening."]},
-      {"marker":"AUDIO","title":"Spoken training responses","paragraphs":["ACTS generates English text-to-speech responses locally using bundled voice-model files. It does not send scripts, reserve prices, bids or disturbance text to an external speech-generation service. This is separate from the optional Android speech-recognition service described above."]},
-      {"marker":"STORE","title":"Apple, Google and RevenueCat","paragraphs":["Apple App Store or Google Play processes purchases, subscriptions and store-issued offer-code redemptions. ACTS does not receive full payment-card or bank-account details. ACTS Standard and ACTS Pro access is validated through RevenueCat, including eligible permanent Pro gifts.","RevenueCat is initialised when ACTS starts, including before you make a purchase. It can receive an anonymous app-user identifier, app and device/platform information, product identifiers, purchase history, receipt or signed transaction information, transaction and subscription dates, and entitlement status. These records support available offers, purchase verification, fraud prevention, access, restoration and limited subscription analytics.","ACTS does not send local training history, microphone recordings or scripts to RevenueCat. ACTS does not use advertising SDKs, sell personal information or use RevenueCat for advertising or cross-app tracking. Apple, Google and RevenueCat handle their services under their own policies: https://www.apple.com/legal/privacy/ ; https://policies.google.com/privacy ; https://www.revenuecat.com/privacy/ ."]},
-      {"marker":"NOTIFY","title":"Notifications and ratings","paragraphs":["Optional practice reminders are scheduled locally using activity, streaks and your reminder preferences. The operating system handles permission and delivery. Notification content may be visible on your lock screen, depending on your settings. ACTS does not register an ACTS remote-push account for these reminders. You can turn reminders off in ACTS or phone settings.","ACTS may ask the store to consider showing its rating prompt after training. Local counters limit requests. The store controls the prompt and review, and does not tell ACTS through this feature whether you submitted a rating or what you wrote."]},
-      {"marker":"EXPORT","title":"PDF exports and sharing","paragraphs":["When you choose to export or share a script, ACTS creates a PDF on your device and opens the system share sheet. The PDF can contain the names, labels and other text you entered. ACTS uses temporary files for sharing and attempts to clean these up; the operating system may also retain cached files.","The destination app, recipient or cloud service you choose receives the shared copy under its own practices. Deleting a script or ACTS does not delete copies you exported, sent or saved elsewhere. Check a PDF before sharing it."]},
-      {"marker":"WEB","title":"Website and Android tester registrations","paragraphs":["The website's optional Android testing form collects your name, Google Play account email, country, alpha/beta preference, optional device details and consent to testing contact. We store these with registration status and timestamps in a Cloudflare D1 database. Authorised ACTS administration can view and export registrations to organise testing and provide relevant instructions. The Google Play email may be added to Google's tester access list. Submitting this form is not consent to general marketing.","The website stores your light/dark theme preference in your browser. Cloudflare and the hosting infrastructure process connection information such as IP addresses and request details to deliver and secure the website. ACTS has not added advertising or behavioural analytics trackers to the website. Platform security and essential service mechanisms may operate independently of the theme setting.","Website registration records are separate from local app training data. You can withdraw from testing or request correction or deletion by emailing actsauctioneertraining@gmail.com from your registration email. We may ask for information reasonably needed to verify the request. You do not need to send an account password."]},
-      {"marker":"SUPPORT","title":"Support and permitted disclosures","paragraphs":["If you contact us, we receive your contact details and the message, screenshots or other information you choose to provide. We use them to respond, investigate problems and manage your request. Do not send passwords, payment-card details or unnecessary personal information about others.","Service providers process information as needed to operate hosting, email, store billing and purchase verification. We may disclose information when required by law, to protect rights or security, or with your direction. Providers can process data outside Australia, including in the United States and other locations used for their services. Their processing locations and retention practices are governed by their services; we do not promise Australian-only storage."]},
-      {"marker":"KEEP","title":"Retention, deletion and cancellation","paragraphs":["Local training information remains until removed through available ACTS controls, clearing app data or uninstalling. Device backups, exported PDFs and shared copies must be managed separately. ACTS cannot retrieve or erase local records remotely.","Tester and support records are kept while needed for the testing programme, your request, security, disputes or applicable legal obligations. We review continued need and delete or de-identify records when no longer needed. You can ask us to remove your tester registration, exported tester-list copies under our control, or identifiable support and RevenueCat records where applicable. Provider backups or legally required purchase records may remain under the provider's retention rules.","Deleting ACTS or requesting data deletion does not cancel a subscription. Cancel through the Apple or Google account used to purchase it. Apple and Google independently retain store-account and transaction records; requests concerning those records must also be made to the relevant provider."]},
-      {"marker":"RIGHTS","title":"Security, choices and complaints","paragraphs":["We use operating-system protections for app storage and restrict access to website registration administration. No system can guarantee complete security. Keep your device and store accounts secure and software updated.","Contact actsauctioneertraining@gmail.com for access, correction, deletion, consent withdrawal or a privacy complaint. We will assess your request, verify identity where necessary and respond within a reasonable period, subject to applicable law. If unresolved, you can contact the privacy regulator in your location, including the Office of the Australian Information Commissioner: https://www.oaic.gov.au/ ."]},
-      {"marker":"AGE","title":"Children","paragraphs":["ACTS is intended for auction training and professional development and is not directed to children under 13. We do not knowingly collect their personal information. Contact us if a child has submitted information so we can assess and remove it where appropriate."]},
-      {"marker":"UPDATE","title":"Policy updates","paragraphs":["We update this policy when features, providers or data practices change. The date identifies this revision, also available at https://actsauctioneer.com/privacy . Material new uses requiring consent will be explained before that use begins. Older app versions may offer fewer controls; update ACTS to use the current privacy choices."]}
+      {
+        "marker": "LOCAL",
+        "title": "Training information on your device",
+        "paragraphs": [
+          "ACTS does not require an ACTS account. Auction scripts, user-entered names and labels, saved settings, presets, training results, scores, bid history, timing, progress and streaks are stored in the app storage on your device. ACTS does not upload this training information to an ACTS training database or to RevenueCat.",
+          "The app also keeps preferences, a cached membership status and dates, and local counters that control reminders, optional upgrade messages and store-rating requests. Your operating system may include app data in a device backup according to its settings. Avoid entering confidential client information that you do not need for practice."
+        ]
+      },
+      {
+        "marker": "VOICE",
+        "title": "Optional microphone and speech recognition",
+        "paragraphs": [
+          "Voice control recognises spoken bids and auction commands while you enable the microphone. ACTS uses the recognised words to operate the session. Resulting bids or actions can appear in local session history. ACTS does not keep raw microphone recordings or send them to its own server or RevenueCat.",
+          "On iOS, ACTS requires Apple's on-device speech recognition. If that is unavailable, use manual controls; ACTS does not enable a server-based speech fallback on iOS.",
+          "In ACTS 4.0.1 and later on Android, ACTS prefers the dedicated on-device recogniser. If you choose Allow online speech in the speech privacy prompt, the enabled Android speech provider may receive microphone audio and process it on its servers to recognise your commands. The provider and its retention practices depend on your device and speech-service settings. Choosing On-device only prevents ACTS from falling back to that system service. You can change this choice in ACTS voice-control settings.",
+          "Earlier Android builds may use the system speech provider after microphone permission without the separate ACTS speech privacy choice. Update to 4.0.1 to use the processing controls described above. Voice control is optional. You can decline the privacy prompt, turn the microphone off, revoke microphone or speech permissions in phone settings, and use manual controls. ACTS requests microphone permission before listening."
+        ]
+      },
+      {
+        "marker": "AUDIO",
+        "title": "Spoken training responses",
+        "paragraphs": [
+          "ACTS generates English text-to-speech responses locally using bundled voice-model files. It does not send scripts, reserve prices, bids or disturbance text to an external speech-generation service. This is separate from the optional Android speech-recognition service described above."
+        ]
+      },
+      {
+        "marker": "STORE",
+        "title": "Apple, Google and RevenueCat",
+        "paragraphs": [
+          "Apple App Store or Google Play processes purchases, subscriptions and store-issued offer-code redemptions. ACTS does not receive full payment-card or bank-account details. ACTS Standard and ACTS Pro access is validated through RevenueCat, including eligible permanent Pro gifts.",
+          "RevenueCat is initialised when ACTS starts, including before you make a purchase. It can receive an anonymous app-user identifier, app and device/platform information, product identifiers, purchase history, receipt or signed transaction information, transaction and subscription dates, and entitlement status. These records support available offers, purchase verification, fraud prevention, access, restoration and limited subscription analytics.",
+          "ACTS does not send local training history, microphone recordings or scripts to RevenueCat. ACTS does not use advertising SDKs, sell personal information or use RevenueCat for advertising or cross-app tracking. Apple, Google and RevenueCat handle their services under their own policies: https://www.apple.com/legal/privacy/ ; https://policies.google.com/privacy ; https://www.revenuecat.com/privacy/ ."
+        ]
+      },
+      {
+        "marker": "VERSION",
+        "title": "App version checks",
+        "paragraphs": [
+          "From ACTS 4.1.2 build 40102, the app requests the supported-version policy from actsauctioneer.com at launch and when returning to the app. The hosting infrastructure processes the IP address and ordinary connection/request details needed to deliver and secure this response. The request does not include training history, scripts, microphone audio, purchase details or an ACTS account identifier.",
+          "The app stores the version policy and last successful check on your device. A supported build can be used offline for up to 24 hours after a successful check. A fresh installation or expired check needs a connection; a version known to require an update remains blocked until a supported version is installed or a revised policy permits it."
+        ]
+      },
+      {
+        "marker": "NOTIFY",
+        "title": "Notifications and ratings",
+        "paragraphs": [
+          "Optional practice reminders are scheduled locally using activity, streaks and your reminder preferences. The operating system handles permission and delivery. Notification content may be visible on your lock screen, depending on your settings. ACTS does not register an ACTS remote-push account for these reminders. You can turn reminders off in ACTS or phone settings.",
+          "ACTS may ask the store to consider showing its rating prompt after training. Local counters limit requests. The store controls the prompt and review, and does not tell ACTS through this feature whether you submitted a rating or what you wrote."
+        ]
+      },
+      {
+        "marker": "EXPORT",
+        "title": "PDF exports and sharing",
+        "paragraphs": [
+          "When you choose to export or share a script, ACTS creates a PDF on your device and opens the system share sheet. The PDF can contain the names, labels and other text you entered. ACTS uses temporary files for sharing and attempts to clean these up; the operating system may also retain cached files.",
+          "The destination app, recipient or cloud service you choose receives the shared copy under its own practices. Deleting a script or ACTS does not delete copies you exported, sent or saved elsewhere. Check a PDF before sharing it."
+        ]
+      },
+      {
+        "marker": "WEB",
+        "title": "Website and Android tester registrations",
+        "paragraphs": [
+          "The website's optional Android testing form collects your name, Google Play account email, country, alpha/beta preference, optional device details and consent to testing contact. We store these with registration status and timestamps in a Cloudflare D1 database. Authorised ACTS administration can view and export registrations to organise testing and provide relevant instructions. The Google Play email may be added to Google's tester access list. Submitting this form is not consent to general marketing.",
+          "The website stores your light/dark theme preference in your browser. Cloudflare and the hosting infrastructure process connection information such as IP addresses and request details to deliver and secure the website. ACTS has not added advertising or behavioural analytics trackers to the website. Platform security and essential service mechanisms may operate independently of the theme setting.",
+          "Website registration records are separate from local app training data. You can withdraw from testing or request correction or deletion by emailing actsauctioneertraining@gmail.com from your registration email. We may ask for information reasonably needed to verify the request. You do not need to send an account password."
+        ]
+      },
+      {
+        "marker": "SUPPORT",
+        "title": "Support and permitted disclosures",
+        "paragraphs": [
+          "If you contact us, we receive your contact details and the message, screenshots or other information you choose to provide. We use them to respond, investigate problems and manage your request. Do not send passwords, payment-card details or unnecessary personal information about others.",
+          "Service providers process information as needed to operate hosting, email, store billing and purchase verification. We may disclose information when required by law, to protect rights or security, or with your direction. Providers can process data outside Australia, including in the United States and other locations used for their services. Their processing locations and retention practices are governed by their services; we do not promise Australian-only storage."
+        ]
+      },
+      {
+        "marker": "KEEP",
+        "title": "Retention, deletion and cancellation",
+        "paragraphs": [
+          "Local training information remains until removed through available ACTS controls, clearing app data or uninstalling. Device backups, exported PDFs and shared copies must be managed separately. ACTS cannot retrieve or erase local records remotely.",
+          "Tester and support records are kept while needed for the testing programme, your request, security, disputes or applicable legal obligations. We review continued need and delete or de-identify records when no longer needed. You can ask us to remove your tester registration, exported tester-list copies under our control, or identifiable support and RevenueCat records where applicable. Provider backups or legally required purchase records may remain under the provider's retention rules.",
+          "Deleting ACTS or requesting data deletion does not cancel a subscription. Cancel through the Apple or Google account used to purchase it. Apple and Google independently retain store-account and transaction records; requests concerning those records must also be made to the relevant provider."
+        ]
+      },
+      {
+        "marker": "RIGHTS",
+        "title": "Security, choices and complaints",
+        "paragraphs": [
+          "We use operating-system protections for app storage and restrict access to website registration administration. No system can guarantee complete security. Keep your device and store accounts secure and software updated.",
+          "Contact actsauctioneertraining@gmail.com for access, correction, deletion, consent withdrawal or a privacy complaint. We will assess your request, verify identity where necessary and respond within a reasonable period, subject to applicable law. If unresolved, you can contact the privacy regulator in your location, including the Office of the Australian Information Commissioner: https://www.oaic.gov.au/ ."
+        ]
+      },
+      {
+        "marker": "AGE",
+        "title": "Children",
+        "paragraphs": [
+          "ACTS is intended for auction training and professional development and is not directed to children under 13. We do not knowingly collect their personal information. Contact us if a child has submitted information so we can assess and remove it where appropriate."
+        ]
+      },
+      {
+        "marker": "UPDATE",
+        "title": "Policy updates",
+        "paragraphs": [
+          "We update this policy when features, providers or data practices change. The date identifies this revision, also available at https://actsauctioneer.com/privacy . Material new uses requiring consent will be explained before that use begins. Older app versions may offer fewer controls; update ACTS to use the current privacy choices."
+        ]
+      }
     ]
   },
   "terms": {
@@ -27,17 +121,99 @@
     "subtitle": "ACTS access, training and responsible use",
     "introduction": "These terms apply to the ACTS: Auctioneer Training app and website operated by Nicholas McIntyre, trading as ACTS: Auctioneer Training. Contact actsauctioneertraining@gmail.com. Please read these terms and the Privacy Policy before using ACTS.",
     "sections": [
-      {"marker":"AGREE","title":"Agreement and store terms","paragraphs":["By using ACTS you agree to these terms to the extent permitted by law. If you do not agree, stop using ACTS and manage any subscription through your store account. Applicable Apple App Store or Google Play terms also apply to your download and transactions.","For the iOS app, Apple's Standard Licensed Application End User License Agreement governs the app licence unless the App Store listing expressly supplies a different agreement: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ . These terms supplement that licence with ACTS service, training and website terms and do not replace Apple's standard licence or override mandatory consumer rights."]},
-      {"marker":"TRAIN","title":"Training purpose","paragraphs":["ACTS is a simulator and practice aid. Generated scripts, calculations, scenarios, scoring and recommendations are educational material, not legal, financial, property, compliance or auction-day advice. Check outputs before use and obtain appropriate professional advice for real transactions.","ACTS does not guarantee accreditation, competition results, auction performance or a particular outcome. You remain responsible for following applicable auction laws, professional rules, agency procedures and auction conditions. Do not use ACTS in a way that creates a safety risk or distracts you from real duties."]},
-      {"marker":"USE","title":"Permitted use","paragraphs":["Subject to the applicable store licence and these terms, you may use ACTS on supported devices for lawful personal training, preparation and professional development. You must have authority to use any information you enter.","Do not resell the app, redistribute protected app assets or source code, bypass store access controls, interfere with operation, impersonate another person or use ACTS unlawfully. Restrictions on reverse engineering or copying apply only to the extent permitted by law and do not restrict rights granted by an applicable open-source licence."]},
-      {"marker":"PLAN","title":"Standard and Pro subscriptions","paragraphs":["ACTS offers Standard and Pro membership tiers with the features described on the relevant purchase screen. Weekly, monthly and annual plans are auto-renewing subscriptions where available. The store displays the actual local price, currency, billing period and any offer before confirmation.","Payment is charged to the Apple or Google account used for purchase. Unless cancelled, a subscription renews for its billing period under the store's rules. Price changes are subject to required notice and consent. Manage or cancel in the original store account; deleting ACTS does not cancel billing. Cancellation normally stops future renewal and access continues through the paid period, subject to refunds or other store adjustments."]},
-      {"marker":"CODE","title":"Store codes and permanent Pro gifts","paragraphs":["Store-issued codes are redeemed through the relevant Apple or Google redemption flow, subject to that store's eligibility, availability and expiry rules. Review the store confirmation for the access period, price and whether renewal applies. A time-limited code does not create permanent access.","An eligible ACTS Pro Lifetime gift provides the Pro entitlement without a scheduled expiry or recurring subscription charge. It is a non-consumable purchase entitlement, not an auto-renewing plan, and is not offered on ACTS public purchase screens. Permanent access does not promise that every future separate product will be included, or that the app will operate forever on every device. Applicable consumer rights continue to apply.","Use the same store account to restore eligible purchases. Apple codes cannot be redeemed in Google Play and Google codes cannot be redeemed in the App Store. ACTS has no shared user account that guarantees access will transfer between the two stores. Legacy in-app admin codes are no longer an access method in version 4.0.1."]},
-      {"marker":"BILL","title":"Restoration, refunds and consumer rights","paragraphs":["Restore Purchases asks the store and RevenueCat to re-check eligible access. Network or store issues, expired access or a different store account may prevent recognition. Contact us if restoration does not resolve an eligible purchase.","Apple refund requests can be made at https://reportaproblem.apple.com/ . Google Play refund help is at https://support.google.com/googleplay/answer/2479637 . You may also contact ACTS for assistance. Store procedures do not exclude rights or remedies against ACTS that the law provides.","Nothing in these terms excludes, restricts or modifies a consumer guarantee or other right or remedy that cannot lawfully be excluded, including under the Australian Consumer Law. Where applicable, remedies can include repair, replacement, refund or compensation under that law."]},
-      {"marker":"LOCAL","title":"Your information and exported scripts","paragraphs":["You retain any rights you have in material you enter. You permit ACTS to process that material as needed to provide the features you request; this does not transfer ownership to ACTS. Do not enter or share material that infringes copyright, confidentiality, privacy or another person's rights.","You may save, print, export and share scripts generated through the app's intended features for your own training and preparation, including with colleagues or a coach. This permission does not authorise selling an ACTS content library, redistributing bundled artwork, fonts or voice models, or claiming ACTS endorses you. Third-party rights in your entries still apply.","Local history and scripts may be lost when app data is cleared, the app is deleted or a device is changed without a compatible backup. Keep separate copies you need. The Privacy Policy explains local data, exports, optional speech services, store records and website registrations."]},
-      {"marker":"IP","title":"Copyright, branding and licences","paragraphs":["Rights in ACTS software, branding, interface and original materials are reserved by their respective rights holders to the extent protected by law. No ownership of ACTS materials is transferred by access to the app. These terms do not assert exclusive copyright over every generated output.","Third-party software, fonts, voice-model materials and datasets remain governed by their own licences. Notices are available in the app under Legal & Licences and on the website at https://actsauctioneer.com/credits . Open-source licence rights are not reduced by these terms.","For a copyright concern, contact actsauctioneertraining@gmail.com with the work concerned, where it appears in ACTS, your contact details and the basis of your claim. We will review it and address substantiated issues."]},
-      {"marker":"CHANGE","title":"Updates, availability and fair changes","paragraphs":["ACTS needs a compatible device and operating system; purchases, redemption, restoration and updates require a network connection. Features may need maintenance or change for security, compatibility or store requirements. Availability cannot be guaranteed without interruption.","We will give reasonable notice of material changes affecting paid access where practicable, and comply with applicable notice, consent and consumer-remedy obligations. Urgent security or legal changes may take effect sooner. We will not rely on a change to remove accrued rights or avoid delivering paid access without a remedy required by law."]},
-      {"marker":"LIMIT","title":"Responsibility and limitations","paragraphs":["ACTS is responsible for the app and its support. Apple and Google separately provide their store and payment services. Each provider's applicable obligations continue to apply.","Subject to non-excludable rights, ACTS does not warrant that training outputs are error-free or suitable for a particular real transaction. Any exclusion or limitation of liability applies only to the extent permitted by law; nothing here removes liability that cannot lawfully be excluded. We do not ask you to waive mandatory consumer protections."]},
-      {"marker":"LAW","title":"Law, changes and contact","paragraphs":["These terms are governed by the laws of Victoria, Australia, subject to mandatory protections in your location. Disputes may be heard by courts with jurisdiction under applicable law; this does not require consumers to waive a right to use another competent court.","Updated terms show a new date and are published in ACTS and at https://actsauctioneer.com/terms . Material changes will be communicated where appropriate, and consent obtained where required. Contact actsauctioneertraining@gmail.com with questions or complaints."]}
+      {
+        "marker": "AGREE",
+        "title": "Agreement and store terms",
+        "paragraphs": [
+          "By using ACTS you agree to these terms to the extent permitted by law. If you do not agree, stop using ACTS and manage any subscription through your store account. Applicable Apple App Store or Google Play terms also apply to your download and transactions.",
+          "For the iOS app, Apple's Standard Licensed Application End User License Agreement governs the app licence unless the App Store listing expressly supplies a different agreement: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ . These terms supplement that licence with ACTS service, training and website terms and do not replace Apple's standard licence or override mandatory consumer rights."
+        ]
+      },
+      {
+        "marker": "TRAIN",
+        "title": "Training purpose",
+        "paragraphs": [
+          "ACTS is a simulator and practice aid. Generated scripts, calculations, scenarios, scoring and recommendations are educational material, not legal, financial, property, compliance or auction-day advice. Check outputs before use and obtain appropriate professional advice for real transactions.",
+          "ACTS does not guarantee accreditation, competition results, auction performance or a particular outcome. You remain responsible for following applicable auction laws, professional rules, agency procedures and auction conditions. Do not use ACTS in a way that creates a safety risk or distracts you from real duties."
+        ]
+      },
+      {
+        "marker": "USE",
+        "title": "Permitted use",
+        "paragraphs": [
+          "Subject to the applicable store licence and these terms, you may use ACTS on supported devices for lawful personal training, preparation and professional development. You must have authority to use any information you enter.",
+          "Do not resell the app, redistribute protected app assets or source code, bypass store access controls, interfere with operation, impersonate another person or use ACTS unlawfully. Restrictions on reverse engineering or copying apply only to the extent permitted by law and do not restrict rights granted by an applicable open-source licence."
+        ]
+      },
+      {
+        "marker": "PLAN",
+        "title": "Standard and Pro subscriptions",
+        "paragraphs": [
+          "ACTS offers Standard and Pro membership tiers with the features described on the relevant purchase screen. Weekly, monthly and annual plans are auto-renewing subscriptions where available. The store displays the actual local price, currency, billing period and any offer before confirmation.",
+          "Payment is charged to the Apple or Google account used for purchase. Unless cancelled, a subscription renews for its billing period under the store's rules. Price changes are subject to required notice and consent. Manage or cancel in the original store account; deleting ACTS does not cancel billing. Cancellation normally stops future renewal and access continues through the paid period, subject to refunds or other store adjustments."
+        ]
+      },
+      {
+        "marker": "CODE",
+        "title": "Store codes and permanent Pro gifts",
+        "paragraphs": [
+          "Store-issued codes are redeemed through the relevant Apple or Google redemption flow, subject to that store's eligibility, availability and expiry rules. Review the store confirmation for the access period, price and whether renewal applies. A time-limited code does not create permanent access.",
+          "An eligible ACTS Pro Lifetime gift provides the Pro entitlement without a scheduled expiry or recurring subscription charge. It is a non-consumable purchase entitlement, not an auto-renewing plan, and is not offered on ACTS public purchase screens. Permanent access does not promise that every future separate product will be included, or that the app will operate forever on every device. Applicable consumer rights continue to apply.",
+          "Use the same store account to restore eligible purchases. Apple codes cannot be redeemed in Google Play and Google codes cannot be redeemed in the App Store. ACTS has no shared user account that guarantees access will transfer between the two stores. Legacy in-app admin codes are no longer an access method in version 4.0.1."
+        ]
+      },
+      {
+        "marker": "BILL",
+        "title": "Restoration, refunds and consumer rights",
+        "paragraphs": [
+          "Restore Purchases asks the store and RevenueCat to re-check eligible access. Network or store issues, expired access or a different store account may prevent recognition. Contact us if restoration does not resolve an eligible purchase.",
+          "Apple refund requests can be made at https://reportaproblem.apple.com/ . Google Play refund help is at https://support.google.com/googleplay/answer/2479637 . You may also contact ACTS for assistance. Store procedures do not exclude rights or remedies against ACTS that the law provides.",
+          "Nothing in these terms excludes, restricts or modifies a consumer guarantee or other right or remedy that cannot lawfully be excluded, including under the Australian Consumer Law. Where applicable, remedies can include repair, replacement, refund or compensation under that law."
+        ]
+      },
+      {
+        "marker": "LOCAL",
+        "title": "Your information and exported scripts",
+        "paragraphs": [
+          "You retain any rights you have in material you enter. You permit ACTS to process that material as needed to provide the features you request; this does not transfer ownership to ACTS. Do not enter or share material that infringes copyright, confidentiality, privacy or another person's rights.",
+          "You may save, print, export and share scripts generated through the app's intended features for your own training and preparation, including with colleagues or a coach. This permission does not authorise selling an ACTS content library, redistributing bundled artwork, fonts or voice models, or claiming ACTS endorses you. Third-party rights in your entries still apply.",
+          "Local history and scripts may be lost when app data is cleared, the app is deleted or a device is changed without a compatible backup. Keep separate copies you need. The Privacy Policy explains local data, exports, optional speech services, store records and website registrations."
+        ]
+      },
+      {
+        "marker": "IP",
+        "title": "Copyright, branding and licences",
+        "paragraphs": [
+          "Rights in ACTS software, branding, interface and original materials are reserved by their respective rights holders to the extent protected by law. No ownership of ACTS materials is transferred by access to the app. These terms do not assert exclusive copyright over every generated output.",
+          "Third-party software, fonts, voice-model materials and datasets remain governed by their own licences. Notices are available in the app under Legal & Licences and on the website at https://actsauctioneer.com/credits . Open-source licence rights are not reduced by these terms.",
+          "For a copyright concern, contact actsauctioneertraining@gmail.com with the work concerned, where it appears in ACTS, your contact details and the basis of your claim. We will review it and address substantiated issues."
+        ]
+      },
+      {
+        "marker": "CHANGE",
+        "title": "Updates, availability and fair changes",
+        "paragraphs": [
+          "ACTS needs a compatible device and operating system; purchases, redemption, restoration and updates require a network connection. Features may need maintenance or change for security, compatibility or store requirements. Availability cannot be guaranteed without interruption.",
+          "From ACTS 4.1.2 build 40102, an online supported-version check is required on first use and at least once every 24 hours. ACTS may require installation of a supported update before further use. Existing membership entitlements are separate from this version check. Older installations without the check are not remotely upgraded by this feature.",
+          "We will give reasonable notice of material changes affecting paid access where practicable, and comply with applicable notice, consent and consumer-remedy obligations. Urgent security or legal changes may take effect sooner. We will not rely on a change to remove accrued rights or avoid delivering paid access without a remedy required by law."
+        ]
+      },
+      {
+        "marker": "LIMIT",
+        "title": "Responsibility and limitations",
+        "paragraphs": [
+          "ACTS is responsible for the app and its support. Apple and Google separately provide their store and payment services. Each provider's applicable obligations continue to apply.",
+          "Subject to non-excludable rights, ACTS does not warrant that training outputs are error-free or suitable for a particular real transaction. Any exclusion or limitation of liability applies only to the extent permitted by law; nothing here removes liability that cannot lawfully be excluded. We do not ask you to waive mandatory consumer protections."
+        ]
+      },
+      {
+        "marker": "LAW",
+        "title": "Law, changes and contact",
+        "paragraphs": [
+          "These terms are governed by the laws of Victoria, Australia, subject to mandatory protections in your location. Disputes may be heard by courts with jurisdiction under applicable law; this does not require consumers to waive a right to use another competent court.",
+          "Updated terms show a new date and are published in ACTS and at https://actsauctioneer.com/terms . Material changes will be communicated where appropriate, and consent obtained where required. Contact actsauctioneertraining@gmail.com with questions or complaints."
+        ]
+      }
     ]
   }
 }
