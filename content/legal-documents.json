@@ -1,6 +1,6 @@
 {
-  "revision": "2026-09-27",
-  "date": "27 September 2026",
+  "revision": "2026-10-03",
+  "date": "3 October 2026",
   "operator": "Nicholas McIntyre, trading as ACTS: Auctioneer Training",
   "contact": "actsauctioneertraining@gmail.com",
   "privacy": {
@@ -37,7 +37,7 @@
         "marker": "STORE",
         "title": "Apple, Google and RevenueCat",
         "paragraphs": [
-          "Apple App Store or Google Play processes purchases, subscriptions and store-issued offer-code redemptions. ACTS does not receive full payment-card or bank-account details. ACTS Standard and ACTS Pro access is validated through RevenueCat, including eligible permanent Pro gifts.",
+          "Apple App Store or Google Play processes purchases, subscriptions and store-issued offer-code redemptions. ACTS does not receive full payment-card or bank-account details. ACTS Standard and ACTS Pro access is validated through RevenueCat, including one-time ACTS Pro Lifetime purchases and eligible permanent Pro gifts.",
           "RevenueCat is initialised when ACTS starts, including before you make a purchase. It can receive an anonymous app-user identifier, app and device/platform information, product identifiers, purchase history, receipt or signed transaction information, transaction and subscription dates, and entitlement status. These records support available offers, purchase verification, fraud prevention, access, restoration and limited subscription analytics.",
           "ACTS does not send local training history, microphone recordings or scripts to RevenueCat. ACTS does not use advertising SDKs, sell personal information or use RevenueCat for advertising or cross-app tracking. Apple, Google and RevenueCat handle their services under their own policies: https://www.apple.com/legal/privacy/ ; https://policies.google.com/privacy ; https://www.revenuecat.com/privacy/ ."
         ]
@@ -46,8 +46,8 @@
         "marker": "VERSION",
         "title": "App version checks",
         "paragraphs": [
-          "From ACTS 4.1.2 build 40102, the app requests the supported-version policy from actsauctioneer.com at launch and when returning to the app. The hosting infrastructure processes the IP address and ordinary connection/request details needed to deliver and secure this response. The request does not include training history, scripts, microphone audio, purchase details or an ACTS account identifier.",
-          "The app stores the version policy and last successful check on your device. A supported build can be used offline for up to 24 hours after a successful check. A fresh installation or expired check needs a connection; a version known to require an update remains blocked until a supported version is installed or a revised policy permits it."
+          "From ACTS 4.1.5, the app requests the supported-version policy from actsauctioneer.com once on a fresh app launch. It does not repeat that launch check merely because you return to an app still running in the background. Earlier builds from 4.1.2 build 40102 may also check when returning to the app. The hosting infrastructure processes the IP address and ordinary connection/request details needed to deliver and secure this response. The request does not include training history, scripts, microphone audio, purchase details or an ACTS account identifier.",
+          "The app stores the version policy and last successful check on your device. In current builds, a supported build can use cached version approval offline for up to 30 days after a successful check. A fresh installation, a newly installed build or an expired approval needs a connection. Earlier builds may use a shorter 24-hour period. A version known to require an update remains blocked until a supported version is installed or a revised policy permits it. Membership verification is separate from version approval; its cached status and renewal checks do not extend an expired or revoked purchase indefinitely."
         ]
       },
       {
@@ -155,10 +155,10 @@
       },
       {
         "marker": "CODE",
-        "title": "Store codes and permanent Pro gifts",
+        "title": "Lifetime Pro purchases and store codes",
         "paragraphs": [
           "Store-issued codes are redeemed through the relevant Apple or Google redemption flow, subject to that store's eligibility, availability and expiry rules. Review the store confirmation for the access period, price and whether renewal applies. A time-limited code does not create permanent access.",
-          "An eligible ACTS Pro Lifetime gift provides the Pro entitlement without a scheduled expiry or recurring subscription charge. It is a non-consumable purchase entitlement, not an auto-renewing plan, and is not offered on ACTS public purchase screens. Permanent access does not promise that every future separate product will be included, or that the app will operate forever on every device. Applicable consumer rights continue to apply.",
+          "ACTS Pro Lifetime provides the Pro entitlement through a one-time non-consumable purchase, without a scheduled expiry or recurring charge. It is available on the Pro purchase screen or through an eligible store-issued gift code. Buying Lifetime does not automatically cancel an existing subscription; manage that subscription separately in the original store account. Permanent access does not promise that every future separate product will be included, or that the app will operate forever on every device. Applicable consumer rights continue to apply.",
           "Use the same store account to restore eligible purchases. Apple codes cannot be redeemed in Google Play and Google codes cannot be redeemed in the App Store. ACTS has no shared user account that guarantees access will transfer between the two stores. Legacy in-app admin codes are no longer an access method in version 4.0.1."
         ]
       },
@@ -167,6 +167,7 @@
         "title": "Restoration, refunds and consumer rights",
         "paragraphs": [
           "Restore Purchases asks the store and RevenueCat to re-check eligible access. Network or store issues, expired access or a different store account may prevent recognition. Contact us if restoration does not resolve an eligible purchase.",
+          "Membership verification is separate from supported-version approval. Eligible cached access can support offline use. ACTS re-checks subscription access at renewal or expiry and periodically during an active store billing grace period. If a renewal check fails, recently verified subscription access can be retained for up to three days from its last verification while checks are retried; an internet connection is then needed to verify continued access. This does not create a free renewal or extend a revoked entitlement. Lifetime has no scheduled membership expiry, but refunds, revocations or other store adjustments can remove its entitlement. Purchases, redemption and restoration need a connection.",
           "Apple refund requests can be made at https://reportaproblem.apple.com/ . Google Play refund help is at https://support.google.com/googleplay/answer/2479637 . You may also contact ACTS for assistance. Store procedures do not exclude rights or remedies against ACTS that the law provides.",
           "Nothing in these terms excludes, restricts or modifies a consumer guarantee or other right or remedy that cannot lawfully be excluded, including under the Australian Consumer Law. Where applicable, remedies can include repair, replacement, refund or compensation under that law."
         ]
@@ -194,7 +195,7 @@
         "title": "Updates, availability and fair changes",
         "paragraphs": [
           "ACTS needs a compatible device and operating system; purchases, redemption, restoration and updates require a network connection. Features may need maintenance or change for security, compatibility or store requirements. Availability cannot be guaranteed without interruption.",
-          "From ACTS 4.1.2 build 40102, an online supported-version check is required on first use and at least once every 24 hours. ACTS may require installation of a supported update before further use. Existing membership entitlements are separate from this version check. Older installations without the check are not remotely upgraded by this feature.",
+          "Current ACTS builds check the supported-version policy once on a fresh app launch. A fresh installation, a newly installed build or an expired cached approval needs an internet connection. After a successful check, a supported build can use cached version approval offline for up to 30 days. Earlier builds from 4.1.2 build 40102 may check on resume and use a shorter 24-hour period. ACTS may require installation of a supported update before further use. Older installations without the check are not remotely upgraded by this feature.",
           "We will give reasonable notice of material changes affecting paid access where practicable, and comply with applicable notice, consent and consumer-remedy obligations. Urgent security or legal changes may take effect sooner. We will not rely on a change to remove accrued rights or avoid delivering paid access without a remedy required by law."
         ]
       },
