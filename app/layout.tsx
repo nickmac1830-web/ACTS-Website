@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
-    apple: "/media/acts-icon.png",
+    apple: "/media/acts-touch-icon.png",
   },
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(() => { try { const saved = localStorage.getItem('acts-website-theme'); const theme = saved === 'dark' ? 'dark' : 'light'; document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; } catch (_) {} })();`,
+            __html: `(() => { try { const saved = localStorage.getItem('acts-website-theme-saving') === 'off' ? null : localStorage.getItem('acts-website-theme'); const theme = saved === 'dark' ? 'dark' : 'light'; document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; } catch (_) {} })();`,
           }}
         />
       </head>

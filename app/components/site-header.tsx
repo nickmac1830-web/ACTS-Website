@@ -17,7 +17,7 @@ export function SiteHeader({ home = false, backLabel }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <Link className="brand" href={home ? "#top" : "/"} aria-label="ACTS Auctioneer Training home">
-        <Image className="brand-logo" src="/media/acts-icon.png" alt="" width={48} height={48} priority unoptimized />
+        <Image className="brand-logo" src="/media/acts-logo.webp" alt="" width={48} height={48} priority unoptimized />
         <span>
           <strong>ACTS</strong>
           <small>Auctioneer Training</small>

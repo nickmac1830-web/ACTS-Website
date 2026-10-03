@@ -269,7 +269,7 @@ export default function Home() {
         </div>
         <div className="faq-list">
           <details><summary>Who is ACTS designed for?<span>+</span></summary><p>ACTS is designed for trainee, practising and competition auctioneers, as well as real-estate professionals building stronger auction numeracy and sequence confidence.</p></details>
-          <details><summary>Can I use ACTS without paying?<span>+</span></summary><p>ACTS is free to download, but a paid Standard or Pro subscription is required for access. The app shows the available plan and billing options before you purchase.</p></details>
+          <details><summary>Can I use ACTS without paying?<span>+</span></summary><p>ACTS is free to download, but paid access is required. Standard and Pro subscriptions are available; a valid ACTS Pro Lifetime purchase or gift also provides access without recurring renewal. The app shows the available plan and billing options before you purchase.</p></details>
           <details><summary>Does ACTS require an account?<span>+</span></summary><p>No. There is no ACTS sign-in or account creation process. Your training information is stored locally on your device.</p></details>
           <details><summary>What is included in ACTS Standard?<span>+</span></summary><p>Standard includes two auction difficulty settings, three training modules, basic review and scoring, and visual practice mode.</p></details>
           <details><summary>What does ACTS Pro unlock?<span>+</span></summary><p>ACTS Pro unlocks advanced training configurations, analytical insights, pattern analysis, training recommendations and other premium tools shown inside the app.</p></details>
@@ -315,7 +315,7 @@ export default function Home() {
         <div>
           <p className="kicker">Your next auction starts now</p>
           <h2>Sharper numbers. Better decisions. More confidence under pressure.</h2>
-          <p className="final-cta-note">Free to download. A paid subscription is required for access.</p>
+          <p className="final-cta-note">Free to download. Paid access required.</p>
         </div>
         <a className="app-store-button light" href={APP_STORE_URL} target="_blank" rel="noreferrer">
           <Apple size={26} fill="currentColor" strokeWidth={1.6} aria-hidden="true" />
